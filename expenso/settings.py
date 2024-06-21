@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-@h^lzjv2n-v)l$9ar6*ywivlw!ai(8=n0z=ms7sholl1qkm4o7
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
+'8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
 ".herokuapp.com"]
 
 
