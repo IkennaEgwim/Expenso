@@ -32,7 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
-'8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net','8001-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
+'8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
+'8001-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
+'8002-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
 ".herokuapp.com"]
 
 
@@ -136,12 +138,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+LOGIN_URL = 'login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 
 

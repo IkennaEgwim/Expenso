@@ -9,4 +9,5 @@ urlpatterns = [
     path('add_expense/', views.add_expense, name='add_expense'),
     path('add_category/', views.add_category, name='add_category'),
     path('set_budget/', views.set_budget, name='set_budget'),
+    path('accounts/login/', views.login_view),
 ]
