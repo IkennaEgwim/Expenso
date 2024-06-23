@@ -76,3 +76,17 @@ def add_category(request):
     else:
         form = CategoryForm()
     return render(request, 'expenso_app/add_category.html', {'form': form})
+
+@login_required
+def set_budget(request):
+    if request.method == 'POST':
+        form = BudgetForm(request.POST)
+        if form.is_valid():
+            budget = form.save(commit=False)
+            budget.user = request.user
+            budget.save()
+            return redirect('home')
+    else:
+        form = BudgetForm()
+    return render(request, 'tracker/set_budget.html', {'form': form})
+
