@@ -27,7 +27,12 @@ def login_view(request):
         if user is not None:
             login(request, user)
             return redirect('home')
-    return render(request, 'expenso_app/login.html')
+        else:
+            # Return an 'invalid login' error message.
+            return render(request, 'expenso_app/login.html', {'error': 'Invalid username or password'})
+    else:
+        return render(request, 'expenso_app/login.html')
+
 
 def logout_view(request):
     logout(request)
@@ -45,3 +50,29 @@ def home(request):
         'budgets': budgets,
     }
     return render(request, 'expenso_app/home.html', context)
+
+@login_required
+def add_expense(request):
+    if request.method == 'POST':
+        form = ExpenseForm(request.POST)
+        if form.is_valid():
+            expense = form.save(commit=False)
+            expense.user = request.user
+            expense.save()
+            return redirect('home')
+    else:
+        form = ExpenseForm()
+    return render(request, 'tracker/add_expense.html', {'form': form})
+
+@login_required
+def add_category(request):
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            category = form.save(commit=False)
+            category.user = request.user
+            category.save()
+            return redirect('home')
+    else:
+        form = CategoryForm()
+    return render(request, 'expenso_app/add_category.html', {'form': form})
