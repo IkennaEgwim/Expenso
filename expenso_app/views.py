@@ -2,6 +2,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import Expense, Category, Budget
+from django.contrib.auth.models import User
+from .forms import ExpenseForm, CategoryForm, BudgetForm
+
 
 # Create your views here.
 
@@ -62,7 +66,7 @@ def add_expense(request):
             return redirect('home')
     else:
         form = ExpenseForm()
-    return render(request, 'tracker/add_expense.html', {'form': form})
+    return render(request, 'expenso_app/add_expense.html', {'form': form})
 
 @login_required
 def add_category(request):
@@ -88,5 +92,5 @@ def set_budget(request):
             return redirect('home')
     else:
         form = BudgetForm()
-    return render(request, 'tracker/set_budget.html', {'form': form})
+    return render(request, 'expenso_app/set_budget.html', {'form': form})
 

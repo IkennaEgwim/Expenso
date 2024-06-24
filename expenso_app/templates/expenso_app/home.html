@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
 </head>
-
-<body>
-    <h2>Expenses</h2>
-    <ul>
-        {% for expense in expenses %}
-        <li>{{ expense.date }} - {{ expense.category }} - {{ expense.amount }} - {{ expense.notes }}</li>
-        {% endfor %}
-    </ul>
-
-    <h2>Categories</h2>
-    <ul>
-        {% for category in categories %}
-        <li>{{ category.name }}</li>
-        {% endfor %}
-    </ul>
-
-    <h2>Budgets</h2>
-    <ul>
-        {% for budget in budgets %}
-        <li>{{ budget.category }} - {{ budget.amount }} ({{ budget.start_date }} to {{ budget.end_date }})</li>
-        {% endfor %}
-    </ul>
-
-    <a href="{% url 'add_expense' %}">Add Expense</a>
-    <a href="{% url 'add_category' %}">Add Category</a>
-    <a href="{% url 'set_budget' %}">Set Budget</a>
-    <a href="{% url 'logout' %}">Logout</a>
+    <body>
+        <h2>Expenses</h2>
+        <ul>
+            {% for expense in expenses %}
+            <li>{{ expense.date }} - {{ expense.category }} - {{ expense.amount }} - {{ expense.notes }}</li>
+            {% endfor %}
+        </ul>
+    
+        <h2>Categories</h2>
+        <ul>
+            {% for category in categories %}
+            <li>{{ category.name }}</li>
+            {% endfor %}
+        </ul>
+    
+        <h2>Budgets</h2>
+        <ul>
+            {% for budget in budgets %}
+            <li>{{ budget.category }} - {{ budget.amount }} ({{ budget.start_date }} to {{ budget.end_date }})</li>
+            {% endfor %}
+        </ul>
+    
+        <a href="{% url 'add_expense' %}">Add Expense</a>
+        <a href="{% url 'add_category' %}">Add Category</a>
+        <a href="{% url 'set_budget' %}">Set Budget</a>
+        <a href="{% url 'logout' %}">Logout</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
-
 </html>

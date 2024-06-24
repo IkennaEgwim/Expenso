@@ -32,9 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
+'8000-ikennaegwim-expenso-*',
 '8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
-'8001-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
-'8002-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
 ".herokuapp.com"]
 
 
@@ -102,7 +101,9 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://postgres://ujmpqi6wszu:fAbdXJUmth9N@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/ride_coil_bulge_471635",
-    "https://*.herokuapp.com",]
+    "https://*.herokuapp.com",
+    "https://*.codeinstitute-ide.net",
+    ]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
