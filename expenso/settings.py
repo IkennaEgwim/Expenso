@@ -32,7 +32,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
-'8000-ikennaegwim-expenso-*',
 '8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
 ".herokuapp.com"]
 
