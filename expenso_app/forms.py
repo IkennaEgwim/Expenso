@@ -1,5 +1,6 @@
 from django import forms
 from .models import Expense, Category, Budget
+
 class DateInput(forms.DateInput):
     input_type = 'date'
 
@@ -22,4 +23,4 @@ class BudgetForm(forms.ModelForm):
         widgets = {
             'date': DateInput(),
         }
-        
+

@@ -19,5 +19,8 @@
     "node-static": "^0.7.11",
     "node-pty": "^0.10.1",
     "total4": "^0.0.45"
-  }
+  },
+  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
+  "devDependencies": {},
+  "keywords": []
 }
