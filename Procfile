@@ -1,2 +1,2 @@
 web: node index.js
-web: gunicorn expenso.wsgi
+web: gunicorn expenso.wsgi --log-file -
