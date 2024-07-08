@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Expense, Category, Budget
 from django.contrib.auth.models import User
 from .forms import ExpenseForm, CategoryForm, BudgetForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -30,6 +31,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            messages.info(request, "You just logged in")
             return redirect('home')
         else:
             # Return an 'invalid login' error message.
