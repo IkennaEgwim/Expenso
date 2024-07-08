@@ -65,7 +65,10 @@ def add_expense(request):
             expense = form.save(commit=False)
             expense.user = request.user
             expense.save()
+            messages.success(request, "Expense added successfully!")
             return redirect('home')
+        else:
+            messages.error(request, "There was an error adding the expense.")     
     else:
         form = ExpenseForm()
     return render(request, 'expenso_app/add_expense.html', {'form': form})
@@ -78,7 +81,10 @@ def add_category(request):
             category = form.save(commit=False)
             category.user = request.user
             category.save()
+            messages.success(request, "Category added successfully!")
             return redirect('home')
+        else:
+            messages.error(request, "There was an error adding the category.")  
     else:
         form = CategoryForm()
     return render(request, 'expenso_app/add_category.html', {'form': form})
@@ -91,7 +97,10 @@ def set_budget(request):
             budget = form.save(commit=False)
             budget.user = request.user
             budget.save()
+            messages.success(request, "Budget set successfully!")
             return redirect('home')
+        else:
+            messages.error(request, "There was an error adding the budget.") 
     else:
         form = BudgetForm()
     return render(request, 'expenso_app/set_budget.html', {'form': form})
