@@ -29,11 +29,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
 '8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
-".herokuapp.com"]
+'8080-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
+'expenso.herokuapp.com',
+'.herokuapp.com']
 
 
 # Application definition
@@ -95,8 +97,8 @@ WSGI_APPLICATION = 'expenso.wsgi.application'
 #}
 
 DATABASES = {
- 'default':
- dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#  'default': dj_database_url.parse(os.environ.get("DATABASE_URL")
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
  }
 
 CSRF_TRUSTED_ORIGINS = [
@@ -139,9 +141,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
 LOGIN_URL = 'login'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
