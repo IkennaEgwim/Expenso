@@ -1,90 +1,93 @@
 {% extends 'expenso_app/base.html' %}
-{% block title %}Dashboard{% endblock %}
+{% load static %}
+
+{% block title %}Dashboard - Expenso{% endblock %}
+
 {% block content %}
-<h2>{{ welcome_message }}</h2>
+    <h2>{{ welcome_message }}</h2>
+    
+    <!-- Chart for Expense Distribution -->
+    <h3>Expense Distribution by Category</h3>
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+    
+    <!-- Chart for Budget Tracking -->
+    <h3>Budget Tracking</h3>
+    <canvas id="budgetChart" width="400" height="200"></canvas>
+    
+    <h3>Your Expenses</h3>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.date }}: {{ expense.category }} - {{ expense.amount }} - {{ expense.notes }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Your Categories</h3>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.name }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Your Budgets</h3>
+    <ul>
+        {% for budget in budgets %}
+            <li>{{ budget.category }}: {{ budget.amount }} ({{ budget.start_date }} to {{ budget.end_date }})</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'add_expense' %}">Add Expense</a>
+    <a href="{% url 'add_category' %}">Add Category</a>
+    <a href="{% url 'set_budget' %}">Set Budget</a>
+{% endblock %}
 
-<!-- Chart for Expense Distribution -->
-<h3>Expense Distribution by Category</h3>
-<canvas id="expenseChart" width="400" height="200"></canvas>
-
-<!-- Chart for Budget Tracking -->
-<h3>Budget Tracking</h3>
-<canvas id="budgetChart" width="400" height="200"></canvas>
-
-<h3>Your Expenses</h3>
-<ul>
-    {% for expense in expenses %}
-    <li>{{ expense.date }}: {{ expense.category }} - {{ expense.amount }} - {{ expense.notes }}</li>
-    {% endfor %}
-</ul>
-
-<h3>Your Categories</h3>
-<ul>
-    {% for category in categories %}
-    <li>{{ category.name }}</li>
-    {% endfor %}
-</ul>
-
-<h3>Your Budgets</h3>
-<ul>
-    {% for budget in budgets %}
-    <li>{{ budget.category }}: {{ budget.amount }} ({{ budget.start_date }} to {{ budget.end_date }})</li>
-    {% endfor %}
-</ul>
-
-<a href="{% url 'add_expense' %}">Add Expense</a>
-<a href="{% url 'add_category' %}">Add Category</a>
-<a href="{% url 'set_budget' %}">Set Budget</a>
-
-<!-- JavaScript for Charts -->
-
-<script>
-    // Expense Distribution Chart
-    var ctxExpense = document.getElementById('expenseChart').getContext('2d');
-    var expenseChart = new Chart(ctxExpense, {
-        type: 'pie',
-        data: {
-            labels: [{% for category in categories %}"{{ category.name }}"{% if not forloop.last %}, {% endif %}{% endfor %}],
-            datasets: [{
-                label: 'Expense Distribution',
-                data: [{% for category in categories %}{{ category.expense_set.filter(user=request.user).aggregate(total=Sum('amount'))['total']|default:0 }}{% if not forloop.last %}, {% endif %}{% endfor %}],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.7)',
-                    'rgba(54, 162, 235, 0.7)',
-                    'rgba(255, 206, 86, 0.7)',
-                    'rgba(75, 192, 192, 0.7)',
-                    'rgba(153, 102, 255, 0.7)',
-                    'rgba(255, 159, 64, 0.7)'
-                ]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
-    // Budget Tracking Chart
-    var ctxBudget = document.getElementById('budgetChart').getContext('2d');
-    var budgetChart = new Chart(ctxBudget, {
-        type: 'bar',
-        data: {
-            labels: [{% for budget in budgets %}"{{ budget.category.name }}"{% if not forloop.last %}, {% endif %}{% endfor %}],
-            datasets: [{
-                label: 'Budget Amount',
-                data: [{% for budget in budgets %}{{ budget.amount }}{% if not forloop.last %}, {% endif %}{% endfor %}],
-                backgroundColor: 'rgba(54, 162, 235, 0.7)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+{% block extra_scripts %}
+    <script>
+        // Expense Distribution Chart
+        var ctxExpense = document.getElementById('expenseChart').getContext('2d');
+        var expenseChart = new Chart(ctxExpense, {
+            type: 'pie',
+            data: {
+                labels: [{% for category in categories %}"{{ category.name }}"{% if not forloop.last %}, {% endif %}{% endfor %}],
+                datasets: [{
+                    label: 'Expense Distribution',
+                    data: [{% for category in categories %}{{ category.expense_set.filter(user=request.user).aggregate(total=Sum('amount'))['total']|default:0 }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)'
+                    ]
+                }]
             },
-            responsive: true
-        }
-    });
-</script>
+            options: {
+                responsive: true
+            }
+        });
+
+        // Budget Tracking Chart
+        var ctxBudget = document.getElementById('budgetChart').getContext('2d');
+        var budgetChart = new Chart(ctxBudget, {
+            type: 'bar',
+            data: {
+                labels: [{% for budget in budgets %}"{{ budget.category.name }}"{% if not forloop.last %}, {% endif %}{% endfor %}],
+                datasets: [{
+                    label: 'Budget Amount',
+                    data: [{% for budget in budgets %}{{ budget.amount }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true
+            }
+        });
+    </script>
 {% endblock %}

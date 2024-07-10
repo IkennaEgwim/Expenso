@@ -1,10 +1,11 @@
 {% extends 'expenso_app/base.html' %}
 {% block title %}Add Category{% endblock %}
 {% block content %}
-<h2>{% block title %}</h2>
+<h2>Add Category</h2>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">{% if not form.instance.pk %}Add{% else %}Update{% endif %} Category</button>
 </form>
 {% endblock %}
+
