@@ -145,7 +145,15 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATIC_URL = '/static/'
 
-LOGIN_URL = 'login'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# LOGIN_URL = 'login'
+
+# Ensure this is set up for handling static files in production
+if not DEBUG:
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -76,3 +76,24 @@ form button:hover {
 h2 {
     color: #333;
 }
+
+.welcome-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.welcome-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.welcome-container .btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}

@@ -21,6 +21,6 @@ class BudgetForm(forms.ModelForm):
         model = Budget
         fields = ['category', 'amount', 'start_date', 'end_date']
         widgets = {
-            'date': DateInput(),
+            'start_date': DateInput(), 'end_date': DateInput()
         }
 

@@ -1,39 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="../../static/css/styles.css">
-<title>Title</title>
-</head>
-    <body>
         {% extends 'expenso_app/base.html' %}
 
-        {% block title %}Home{% endblock %}
+        {% block title %} Welcome to Expenso
+            {% endblock %}
         
         {% block content %}
+        <div class="welcome-container">
+            <h4>{{ welcome_message }}</h4>
+           
+            <p>Expenso is your personal expense tracker. Easily input your expenses, categorize them, set budgets, and analyze your financial habits. Get started today and take control of your finances!</p>
+            <a href="{% url 'register' %}" class="btn btn-primary">Get Started</a>
+    </div>
+    <br>
         <h2>Expenses</h2>
         <ul>
             {% for expense in expenses %}
-                <li>{{ expense.date }} - {{ expense.category }} - {{ expense.amount }} - {{ expense.notes }}</li>
+                <li>{{ expense.date }} - {{ expense.category }} - {{ expense.amount }} - {{ expense.notes }}
+                    <a href="{% url 'update_expense' expense.pk %}">Edit</a> 
+                    <a href="{% url 'delete_expense' expense.pk %}">Delete</a>
+                </li>
             {% endfor %}
         </ul>
         
         <h2>Categories</h2>
         <ul>
             {% for category in categories %}
-                <li>{{ category.name }}</li>
+                <li>{{ category.name }}
+                    <a href="{% url 'update_category' category.pk %}">Edit</a> 
+                    <a href="{% url 'delete_category' category.pk %}">Delete</a>
+                </li>
             {% endfor %}
         </ul>
         
         <h2>Budgets</h2>
         <ul>
             {% for budget in budgets %}
-                <li>{{ budget.category }} - {{ budget.amount }} ({{ budget.start_date }} to {{ budget.end_date }})</li>
+                <li>{{ budget.category }} - {{ budget.amount }} ({{ budget.start_date }} to {{ budget.end_date }})
+                    <a href="{% url 'update_budget' budget.pk %}">Edit</a> 
+                    <a href="{% url 'delete_budget' budget.pk %}">Delete</a>
+                </li>
             {% endfor %}
         </ul>
         {% endblock %}        
