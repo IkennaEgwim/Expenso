@@ -1,14 +1,10 @@
-    {% extends 'expenso_app/base.html' %}
-
-    {% block title %}Add Category{% endblock %}
-    
-    {% block content %}
-    <h2>Add Category</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add Category</button>
-    </form>
-    {% endblock %}    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+{% extends 'expenso_app/base.html' %}
+{% block title %}Add Category{% endblock %}
+{% block content %}
+<h2>{% block title %}</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% if not form.instance.pk %}Add{% else %}Update{% endif %} Category</button>
+</form>
+{% endblock %}

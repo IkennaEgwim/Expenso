@@ -48,8 +48,8 @@ def logout_view(request):
 @login_required
 def home(request):
     # Logic to fetch expenses, categories, etc.
-    welcome_message = "Welcome to Expenso! Track your expenses, manage your budget, and gain insights into your spending habits."
-    return render(request, 'expenso_app/home.html', {'welcome_message': welcome_message})
+    # welcome_message = "Welcome to Expenso! Track your expenses, manage your budget, and gain insights into your spending habits."
+    # return render(request, 'expenso_app/home.html', {'welcome_message': welcome_message})
     expenses = Expense.objects.filter(user=request.user)
     categories = Category.objects.filter(user=request.user)
     budgets = Budget.objects.filter(user=request.user)
@@ -57,6 +57,7 @@ def home(request):
         'expenses': expenses,
         'categories': categories,
         'budgets': budgets,
+        'welcome_message': "Welcome to Expenso! Track your expenses, manage your budget, and gain insights into your spending habits."
     }
     return render(request, 'expenso_app/home.html', context)
 

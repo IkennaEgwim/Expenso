@@ -1,14 +1,10 @@
-    {% extends 'expenso_app/base.html' %}
-
-    {% block title %}Set Budget{% endblock %}
-    
-    {% block content %}
-    <h2>Set Budget</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Set Budget</button>
-    </form>
-    {% endblock %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+{% extends 'expenso_app/base.html' %}
+{% block title %}Set Budget{% endblock %}
+{% block content %}
+<h2>{% block title %}</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% if not form.instance.pk %}Set{% else %}Update{% endif %} Budget</button>
+</form>
+{% endblock %}
