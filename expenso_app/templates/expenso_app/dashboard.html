@@ -1,0 +1,30 @@
+{% extends 'expenso_app/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Expenso{% endblock %}
+
+{% block content %}
+<h2>{{ welcome_message }}</h2>
+
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Notes</th>
+        <th>Actions</th>
+    </tr>
+    {% for expense in expenses %}
+    <tr>
+        <td>{{ expense.amount }}</td>
+        <td>{{ expense.date }}</td>
+        <td>{{ expense.category.name }}</td>
+        <td>{{ expense.notes }}</td>
+        <td>
+            <a href="{% url 'edit_expense' expense.id %}">Edit</a>
+            <a href="{% url 'delete_expense' expense.id %}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

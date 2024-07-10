@@ -1,0 +1,10 @@
+{% extends 'expenso_app/base.html' %}
+
+{% block content %}
+<h1>Delete Expense</h1>
+<p>Are you sure you want to delete this expense?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+</form>
+{% endblock %}

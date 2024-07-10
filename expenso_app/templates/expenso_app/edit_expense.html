@@ -1,12 +1,8 @@
 {% extends 'expenso_app/base.html' %}
 
-{% block title %}Update Expense{% endblock %}
-
 {% block content %}
-
-<h2>Update Expense</h2>
-
-<form method="POST">
+<h1>Edit Expense</h1>
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Update Expense</button>

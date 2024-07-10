@@ -1,0 +1,17 @@
+{% extends 'expenso_app/base.html' %}
+
+{% block content %}
+<h1>Manage Categories</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Category</button>
+</form>
+<h2>Existing Categories</h2>
+<ul>
+    {% for category in categories %}
+    <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'expenso_app/base.html' %}
+
+{% block content %}
+<h1>Manage Budgets</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Budget</button>
+</form>
+<h2>Existing Budgets</h2>
+<ul>
+    {% for budget in budgets %}
+    <li>{{ budget.category.name }}: {{ budget.amount }} ({{ budget.period }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

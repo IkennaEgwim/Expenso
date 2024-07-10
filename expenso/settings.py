@@ -34,6 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
 '8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
 '8080-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
+'8001-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
 'expenso.herokuapp.com',
 '.herokuapp.com']
 
@@ -70,7 +71,7 @@ ROOT_URLCONF = 'expenso.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,7 +98,6 @@ WSGI_APPLICATION = 'expenso.wsgi.application'
 #}
 
 DATABASES = {
-#  'default': dj_database_url.parse(os.environ.get("DATABASE_URL")
     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
  }
 
@@ -141,15 +141,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+# STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
-LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'login'
 
 # Ensure this is set up for handling static files in production
 # if not DEBUG:

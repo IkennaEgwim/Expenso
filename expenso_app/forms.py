@@ -7,7 +7,7 @@ class DateInput(forms.DateInput):
 class ExpenseForm(forms.ModelForm):
     class Meta:
         model = Expense
-        fields = ['category', 'amount', 'date', 'notes']
+        fields = ['amount', 'date','category', 'notes']
         widgets = {
             'date': DateInput(),
         }
@@ -19,8 +19,5 @@ class CategoryForm(forms.ModelForm):
 class BudgetForm(forms.ModelForm):
     class Meta:
         model = Budget
-        fields = ['category', 'amount', 'start_date', 'end_date']
-        widgets = {
-            'start_date': DateInput(), 'end_date': DateInput()
-        }
+        fields = ['category', 'amount', 'period']
 
