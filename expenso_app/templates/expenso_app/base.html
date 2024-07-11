@@ -32,13 +32,17 @@
     </header>
     <main>
         {% if messages %}
-        <ul class="messages">
+        <div class="messages">
             {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-                {% endfor %}
-        </ul>
+                <div class="alert {% if message.tags %}{{ message.tags }}{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
         {% endif %}
-        {% block content %}{% endblock %}
+
+        {% block content %}
+        {% endblock %}
     </main>
     <footer>
         <p>&copy; 2024 Ikenna Egwim. | All Rights Reserved.</p>

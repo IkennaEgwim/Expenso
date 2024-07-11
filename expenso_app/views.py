@@ -41,6 +41,7 @@ def add_expense(request):
             expense = form.save(commit=False)
             expense.user = request.user
             expense.save()
+            messages.success(request, f'Expense of {expense.amount} added successfully.')
             return redirect('dashboard')
     else:
         form = ExpenseForm()
@@ -53,6 +54,7 @@ def edit_expense(request, expense_id):
         form = ExpenseForm(request.POST, instance=expense)
         if form.is_valid():
             form.save()
+            messages.success(request, f'Expense of {expense.amount} updated successfully.')
             return redirect('dashboard')
     else:
         form = ExpenseForm(instance=expense)
@@ -63,6 +65,7 @@ def delete_expense(request, expense_id):
     expense = Expense.objects.get(id=expense_id, user=request.user)
     if request.method == 'POST':
         expense.delete()
+        messages.success(request, f'Expense deleted successfully.')
         return redirect('dashboard')
     return render(request, 'expenso_app/delete_expense.html', {'expense': expense})
 
@@ -74,6 +77,7 @@ def manage_categories(request):
             category = form.save(commit=False)
             category.user = request.user
             category.save()
+            messages.success(request, f'Category "{category.name}" added successfully.')
             return redirect('manage_categories')
     else:
         form = CategoryForm()
@@ -88,6 +92,7 @@ def manage_budgets(request):
             budget = form.save(commit=False)
             budget.user = request.user
             budget.save()
+            messages.success(request, f'Budget of {budget.amount} for {budget.period} in {budget.category.name} added successfully.')
             return redirect('manage_budgets')
     else:
         form = BudgetForm()

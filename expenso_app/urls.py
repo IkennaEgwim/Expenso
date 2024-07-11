@@ -11,4 +11,5 @@ urlpatterns = [
     path('manage-budgets/', views.manage_budgets, name='manage_budgets'),
     path('', home, name='home'),
     path('signup/', SignUp.as_view(), name='signup'),
+    
 ]

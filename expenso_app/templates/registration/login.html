@@ -1,6 +1,15 @@
 {% extends 'expenso_app/base.html' %}
-{% block title %}Login{% endblock %}
+{% block title %}Expenso - Expense Tracker{% endblock %}
 {% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Expenso</h1>
+        <p>Your personal expense tracker to manage and analyze your spending. Click on "Get Started" button below to start.</p>
+        <a href="{% url 'signup' %}" class="btn">Get Started</a>
+    </div>
+
+
 <h2>Login</h2>
 {% if error %}
 <p>{{ error }}</p>
