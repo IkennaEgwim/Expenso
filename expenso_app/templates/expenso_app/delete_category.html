@@ -1,0 +1,11 @@
+{% extends 'expenso_app/base.html' %}
+
+{% block content %}
+<h1>Delete Category</h1>
+<p>Are you sure you want to delete the category "{{ category.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+    <a href="{% url 'manage_categories' %}">Cancel</a>
+</form>
+{% endblock %}

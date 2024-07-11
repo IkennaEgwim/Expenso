@@ -1,0 +1,11 @@
+{% extends 'expenso_app/base.html' %}
+
+{% block content %}
+<h1>Delete Budget</h1>
+<p>Are you sure you want to delete the budget for "{{ budget.category.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+    <a href="{% url 'manage_budgets' %}">Cancel</a>
+</form>
+{% endblock %}
