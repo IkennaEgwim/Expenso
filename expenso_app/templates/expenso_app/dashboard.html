@@ -6,6 +6,24 @@
 {% block content %}
 <h2>{{ welcome_message }}</h2>
 
+<h3>Remaining Budget</h3>
+<table>
+    <tr>
+        <th>Category</th>
+        <th>Budget</th>
+        <th>Remaining</th>
+    </tr>
+    {% for category, summary in budget_summary.items %}
+    <tr>
+        <td>{{ category }}</td>
+        <td>{{ summary.budget }}</td>
+        <td>{{ summary.remaining }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Expenses</h3>
+
 <table>
     <tr>
         <th>Amount</th>

@@ -10,7 +10,10 @@
 <h2>Existing Categories</h2>
 <ul>
     {% for category in categories %}
-    <li>{{ category.name }}</li>
+    <li>{{ category.name }}
+        <a href="{% url 'edit_category' category.id %}">Edit</a>
+        <a href="{% url 'delete_category' category.id %}">Delete</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}
