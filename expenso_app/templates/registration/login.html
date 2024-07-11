@@ -4,28 +4,29 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Welcome to Expenso</h1>
-        <p>Your personal expense tracker to manage and analyze your spending. Click on "Get Started" button below to start.<a href="{% url 'signup' %}" class="btn"><strong>Get Started!</strong></a></p>
-        
+        <h2>
+            <center>Welcome to Expenso!</center>
+        </h2>
+        <p>Track your expenses, manage your budget, and gain insights into your spending habits.
+        </p>
+
     </div>
 </section>
 
 <section class="login-section">
-    <h4>Sign In</h4>
-    {% if error %}
-    <p>{{ error }}</p>
-    {% endif %}
-    <form method="POST">
-        {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+    <h3>Login</h3>
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p><center>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></center></p>
 </section>
 
 {% endblock %}
-
-

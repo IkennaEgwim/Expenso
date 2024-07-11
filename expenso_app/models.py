@@ -20,6 +20,20 @@ class Expense(models.Model):
         return f"{self.category} - {self.amount}"
 
 class Budget(models.Model):
+    MONTH_CHOICES = [
+        ('January', 'January'),
+        ('February', 'February'),
+        ('March', 'March'),
+        ('April', 'April'),
+        ('May', 'May'),
+        ('June', 'June'),
+        ('July', 'July'),
+        ('August', 'August'),
+        ('September', 'September'),
+        ('October', 'October'),
+        ('November', 'November'),
+        ('December', 'December'),
+    ]
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
