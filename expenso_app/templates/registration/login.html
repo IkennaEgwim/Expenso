@@ -5,21 +5,27 @@
 <section class="hero">
     <div class="hero-content">
         <h1>Welcome to Expenso</h1>
-        <p>Your personal expense tracker to manage and analyze your spending. Click on "Get Started" button below to start.</p>
-        <a href="{% url 'signup' %}" class="btn">Get Started</a>
+        <p>Your personal expense tracker to manage and analyze your spending. Click on "Get Started" button below to start.<a href="{% url 'signup' %}" class="btn"><strong>Get Started!</strong></a></p>
+        
     </div>
+</section>
 
+<section class="login-section">
+    <h4>Sign In</h4>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+</section>
 
-<h2>Login</h2>
-{% if error %}
-<p>{{ error }}</p>
-{% endif %}
-<form method="POST">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required>
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required>
-    <button type="submit">Login</button>
-</form>
 {% endblock %}
+
+
