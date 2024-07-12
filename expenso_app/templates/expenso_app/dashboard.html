@@ -31,12 +31,26 @@
     {% endfor %}
 </table>
 <br>
-<h2>Remaining Budgets</h2>
-
-<ul>
-    {% for category, remaining in remaining_budgets.items %}
-    <li>{{ category }}: {{ remaining }}</li>
-    {% endfor %}
-</ul>
+<h3>Remaining Budgets</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Budget Month</th>
+            <th>Amount Left</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category, months in remaining_budgets.items %}
+            {% for month, remaining in months.items %}
+                <tr>
+                    <td>{{ category }}</td>
+                    <td>{{ month }}</td>
+                    <td>{{ remaining }}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}

@@ -11,6 +11,24 @@ from django.views.generic import UpdateView, DeleteView
 from django.views import generic
 from django.utils import timezone
 from datetime import timedelta
+from django.utils.timezone import now
+from django.db.models import Sum
+
+# Dictionary to map month names to month numbers
+MONTH_CHOICES_DICT = {
+    'January': 1,
+    'February': 2,
+    'March': 3,
+    'April': 4,
+    'May': 5,
+    'June': 6,
+    'July': 7,
+    'August': 8,
+    'September': 9,
+    'October': 10,
+    'November': 11,
+    'December': 12,
+}
 
 # Create your views here.
 def home(request):
@@ -27,15 +45,15 @@ def dashboard(request):
     categories = Category.objects.filter(user=request.user)
     budgets = Budget.objects.filter(user=request.user)
 
-    # Calculate the remaining budget for each category in the current month
-    from django.utils.timezone import now
-    current_month = now().strftime('%B')
+   # Calculate the remaining budget for each category in each month
     remaining_budgets = {}
     for budget in budgets:
-        if budget.month == current_month:
-            expenses_for_budget = expenses.filter(category=budget.category, date__month=now().month)
-            total_expenses = sum(expense.amount for expense in expenses_for_budget)
-            remaining_budgets[budget.category.name] = budget.amount - total_expenses
+        if budget.category not in remaining_budgets:
+            remaining_budgets[budget.category.name] = {}
+
+        month_expenses = expenses.filter(category=budget.category, date__month=MONTH_CHOICES_DICT[budget.month])
+        total_expenses = month_expenses.aggregate(Sum('amount'))['amount__sum'] or 0
+        remaining_budgets[budget.category.name][budget.month] = budget.amount - total_expenses
 
     context = {
         'expenses': expenses,
@@ -45,13 +63,6 @@ def dashboard(request):
         'welcome_message': "Welcome to Expenso! Track your expenses, manage your budget, and gain insights into your spending habits."
     }
     return render(request, 'expenso_app/dashboard.html', context)
-
-def get_month_number(month_name):
-    import calendar
-    try:
-        return list(calendar.month_name).index(month_name)
-    except ValueError:
-        return 0
 
 @login_required
 def add_expense(request):
