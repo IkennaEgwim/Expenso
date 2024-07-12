@@ -27,33 +27,31 @@ def dashboard(request):
     categories = Category.objects.filter(user=request.user)
     budgets = Budget.objects.filter(user=request.user)
 
-    budget_summary = {}
-    current_date = timezone.now().date()
-
+    # Calculate the remaining budget for each category in the current month
+    from django.utils.timezone import now
+    current_month = now().strftime('%B')
+    remaining_budgets = {}
     for budget in budgets:
-        if budget.period == 'monthly':
-            start_date = current_date.replace(day=1)
-            end_date = (start_date + timedelta(days=31)).replace(day=1) - timedelta(days=1)
-        elif budget.period == 'weekly':
-            start_date = current_date - timedelta(days=current_date.weekday())
-            end_date = start_date + timedelta(days=6)
-
-        expenses_for_budget = expenses.filter(category=budget.category, date__range=[start_date, end_date])
-        total_expenses = sum(exp.amount for exp in expenses_for_budget)
-        remaining_budget = budget.amount - total_expenses
-        budget_summary[budget.category.name] = {
-            'budget': budget.amount,
-            'remaining': remaining_budget
-        }
+        if budget.month == current_month:
+            expenses_for_budget = expenses.filter(category=budget.category, date__month=now().month)
+            total_expenses = sum(expense.amount for expense in expenses_for_budget)
+            remaining_budgets[budget.category.name] = budget.amount - total_expenses
 
     context = {
         'expenses': expenses,
         'categories': categories,
         'budgets': budgets,
-        'budget_summary': budget_summary,
+        'remaining_budgets': remaining_budgets,
         'welcome_message': "Welcome to Expenso! Track your expenses, manage your budget, and gain insights into your spending habits."
     }
     return render(request, 'expenso_app/dashboard.html', context)
+
+def get_month_number(month_name):
+    import calendar
+    try:
+        return list(calendar.month_name).index(month_name)
+    except ValueError:
+        return 0
 
 @login_required
 def add_expense(request):
@@ -63,7 +61,7 @@ def add_expense(request):
             expense = form.save(commit=False)
             expense.user = request.user
             expense.save()
-            messages.success(request, f'Expense of {expense.amount} added successfully.')
+            messages.success(request, f'Expense of {expense.amount} added successfully!')
             return redirect('dashboard')
     else:
         form = ExpenseForm()
@@ -76,7 +74,7 @@ def edit_expense(request, expense_id):
         form = ExpenseForm(request.POST, instance=expense)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Expense of {expense.amount} updated successfully.')
+            messages.success(request, f'Expense of {expense.amount} updated successfully!')
             return redirect('dashboard')
     else:
         form = ExpenseForm(instance=expense)
@@ -87,7 +85,7 @@ def delete_expense(request, expense_id):
     expense = get_object_or_404(Expense, id=expense_id, user=request.user)
     if request.method == 'POST':
         expense.delete()
-        messages.success(request, f'Expense deleted successfully.')
+        messages.success(request, f'Expense deleted successfully!')
         return redirect('dashboard')
     return render(request, 'expenso_app/delete_expense.html', {'expense': expense})
 
@@ -99,7 +97,7 @@ def manage_categories(request):
             category = form.save(commit=False)
             category.user = request.user
             category.save()
-            messages.success(request, f'Category "{category.name}" added successfully.')
+            messages.success(request, f'Category "{category.name}" added successfully!')
             return redirect('manage_categories')
     else:
         form = CategoryForm()
@@ -113,7 +111,7 @@ def edit_category(request, category_id):
         form = CategoryForm(request.POST, instance=category)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Category "{category.name}" updated successfully.')
+            messages.success(request, f'Category "{category.name}" updated successfully!')
             return redirect('manage_categories')
     else:
         form = CategoryForm(instance=category)
@@ -124,7 +122,7 @@ def delete_category(request, category_id):
     category = get_object_or_404(Category, id=category_id, user=request.user)
     if request.method == 'POST':
         category.delete()
-        messages.success(request, f'Category deleted successfully.')
+        messages.success(request, f'Category deleted successfully!')
         return redirect('manage_categories')
     return render(request, 'expenso_app/delete_category.html', {'category': category})
 
@@ -135,8 +133,14 @@ def manage_budgets(request):
         if form.is_valid():
             budget = form.save(commit=False)
             budget.user = request.user
-            budget.save()
-            messages.success(request, f'Budget of {budget.amount} for {budget.period} in {budget.category.name} added successfully.')
+            existing_budget = Budget.objects.filter(user=request.user, category=budget.category, month=budget.month).first()
+            if existing_budget:
+                existing_budget.amount += budget.amount
+                existing_budget.save()
+                messages.success(request, f"Budget for {budget.category.name} in {budget.month} updated to {existing_budget.amount}.")
+            else:
+                budget.save()
+                messages.success(request, f"Budget for {budget.category.name} in {budget.month} added!")
             return redirect('manage_budgets')
     else:
         form = BudgetForm()
@@ -150,7 +154,7 @@ def edit_budget(request, budget_id):
         form = BudgetForm(request.POST, instance=budget)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Budget of {budget.amount} for {budget.period} in {budget.category.name} updated successfully.')
+            messages.success(request, f'Budget of {budget.amount} for {budget.month} in {budget.category.name} updated successfully!')
             return redirect('manage_budgets')
     else:
         form = BudgetForm(instance=budget)
@@ -161,6 +165,6 @@ def delete_budget(request, budget_id):
     budget = get_object_or_404(Budget, id=budget_id, user=request.user)
     if request.method == 'POST':
         budget.delete()
-        messages.success(request, f'Budget deleted successfully.')
+        messages.success(request, f'Budget deleted successfully!')
         return redirect('manage_budgets')
     return render(request, 'expenso_app/delete_budget.html', {'budget': budget})

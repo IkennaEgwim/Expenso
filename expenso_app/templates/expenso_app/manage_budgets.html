@@ -10,7 +10,7 @@
 <h2>Existing Budgets</h2>
 <ul>
     {% for budget in budgets %}
-    <li>{{ budget.category.name }}: {{ budget.amount }} ({{ budget.period }})
+    <li>{{ budget.category.name }}: {{ budget.amount }} ({{ budget.month }})
         <a href="{% url 'edit_budget' budget.id %}">Edit</a>
         <a href="{% url 'delete_budget' budget.id %}">Delete</a>
     </li>

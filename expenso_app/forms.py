@@ -19,5 +19,5 @@ class CategoryForm(forms.ModelForm):
 class BudgetForm(forms.ModelForm):
     class Meta:
         model = Budget
-        fields = ['category', 'amount', 'period']
+        fields = ['category', 'amount', 'month']
 

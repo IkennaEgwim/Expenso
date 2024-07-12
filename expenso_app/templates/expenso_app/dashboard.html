@@ -7,24 +7,7 @@
 <h4><strong><center>{{ welcome_message }}</center></strong></h4>
 <br>
 
-<h3>Remaining Budget</h3>
-<table>
-    <tr>
-        <th>Category</th>
-        <th>Budget</th>
-        <th>Remaining</th>
-    </tr>
-    {% for category, summary in budget_summary.items %}
-    <tr>
-        <td>{{ category }}</td>
-        <td>{{ summary.budget }}</td>
-        <td>{{ summary.remaining }}</td>
-    </tr>
-    {% endfor %}
-</table>
-<br>
 <h3>Expenses</h3>
-
 
 <table>
     <tr>
@@ -47,4 +30,13 @@
     </tr>
     {% endfor %}
 </table>
+<br>
+<h2>Remaining Budgets</h2>
+
+<ul>
+    {% for category, remaining in remaining_budgets.items %}
+    <li>{{ category }}: {{ remaining }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
