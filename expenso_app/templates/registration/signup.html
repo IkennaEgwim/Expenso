@@ -1,11 +1,16 @@
 {% extends 'expenso_app/base.html' %}
+{% block title %}Expenso - Sign Up{% endblock %}
 
 {% block content %}
-<h1>Sign Up</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-</form>
-<p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
+<div class="form-container">
+    <h1>Sign Up</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <div class="mt-3">
+        <a href="{% url 'login' %}">Already have an account? Login</a>
+    </div>
+</div>
 {% endblock %}

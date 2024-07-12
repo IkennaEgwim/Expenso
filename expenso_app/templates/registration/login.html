@@ -1,32 +1,26 @@
 {% extends 'expenso_app/base.html' %}
-{% block title %}Expenso - Expense Tracker{% endblock %}
+{% block title %}Expenso - Login{% endblock %}
+
 {% block content %}
-
-<section class="hero">
-    <div class="hero-content">
-        <h2>
-            <center>Welcome to Expenso!</center>
-        </h2>
-        <p><center>Track your expenses, manage your budget, and gain insights into your spending habits.</center>
-        </p>
-<br>
+<div class="form-container">
+    <h1>Login</h1>
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" name="username" id="username" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="mt-3">
+        <a href="{% url 'signup' %}">Don't have an account? Sign Up</a>
     </div>
-</section>
-
-<section class="login-section">
-    <!-- <h3>Login</h3> -->
-        {% if error %}
-        <p>{{ error }}</p>
-        {% endif %}
-        <form method="POST">
-            {% csrf_token %}
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required><br>
-            <button type="submit">Login</button>
-        </form>
-        <p><center>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></center></p>
-</section>
-
+</div>
 {% endblock %}

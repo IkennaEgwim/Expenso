@@ -1,20 +1,50 @@
 {% extends 'expenso_app/base.html' %}
+{% block title %}Manage Categories - Expenso{% endblock %}
 
 {% block content %}
 <h1>Manage Categories</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Add Category</button>
-</form>
-<h2>Existing Categories</h2>
-<ul>
-    {% for category in categories %}
-    <li>{{ category.name }}
-        <a href="{% url 'edit_category' category.id %}">Edit</a>
-        <a href="{% url 'delete_category' category.id %}">Delete</a>
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+<div class="card">
+    <div class="card-header">
+        Add Category
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Category</button>
+        </form>
+    </div>
+</div>
 
+<div class="card mt-4">
+    <div class="card-header">
+        Existing Categories
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for category in categories %}
+                    <tr>
+                        <td>{{ category.name }}</td>
+                        <td>
+                            <a href="{% url 'edit_category' category.id %}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{% url 'delete_category' category.id %}" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

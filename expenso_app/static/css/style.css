@@ -8,28 +8,72 @@ header {
     padding: 1rem 0;
 }
 
-nav .nav-link {
+.navbar .nav-link {
     color: white;
+    margin-right: 1rem;
 }
 
-.messages .alert {
-    margin: 1rem 0;
+.navbar .nav-link:hover {
+    color: #ffc107;
 }
 
 footer {
     background-color: #f8f9fa;
-    color: #6c757d;
     padding: 1rem 0;
+    margin-top: 2rem;
+    color: #6c757d;
 }
 
-.table th, .table td {
-    vertical-align: middle;
+.table-responsive {
+    margin-top: 1rem;
 }
 
-.btn-sm {
-    margin-left: 0.5rem;
+.accordion-button {
+    background-color: #007bff;
+    color: white;
 }
 
-.list-group-item {
-    margin-bottom: 0.5rem;
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(100%);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.alert {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    header, footer {
+        text-align: center;
+    }
+    
+    .navbar .nav-link {
+        margin-right: 0;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
 }

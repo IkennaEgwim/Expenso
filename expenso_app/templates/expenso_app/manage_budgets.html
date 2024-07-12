@@ -1,19 +1,70 @@
 {% extends 'expenso_app/base.html' %}
+{% block title %}Manage Budgets - Expenso{% endblock %}
 
 {% block content %}
 <h1>Manage Budgets</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Add Budget</button>
-</form>
-<h2>Existing Budgets</h2>
-<ul>
-    {% for budget in budgets %}
-    <li>{{ budget.category.name }}: {{ budget.amount }} ({{ budget.month }})
-        <a href="{% url 'edit_budget' budget.id %}">Edit</a>
-        <a href="{% url 'delete_budget' budget.id %}">Delete</a>
-    </li>
-    {% endfor %}
-</ul>
+<div class="card">
+    <div class="card-header">
+        Add Budget
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-control" id="category" name="category" required>
+                    {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="period" class="form-label">Period</label>
+                <select class="form-control" id="period" name="period" required>
+                    {% for month, num in MONTH_CHOICES %}
+                    <option value="{{ month }}">{{ month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Budget</button>
+        </form>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-header">
+        Existing Budgets
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Period</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for budget in budgets %}
+                    <tr>
+                        <td>{{ budget.category.name }}</td>
+                        <td>{{ budget.amount }}</td>
+                        <td>{{ budget.period }}</td>
+                        <td>
+                            <a href="{% url 'edit_budget' budget.id %}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{% url 'delete_budget' budget.id %}" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}
