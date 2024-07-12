@@ -60,7 +60,7 @@ def dashboard(request):
         'categories': categories,
         'budgets': budgets,
         'remaining_budgets': remaining_budgets,
-        'welcome_message': "Welcome to Expenso!"
+        'welcome_message': ""
     }
     return render(request, 'expenso_app/dashboard.html', context)
 

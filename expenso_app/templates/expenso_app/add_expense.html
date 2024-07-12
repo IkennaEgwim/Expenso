@@ -13,26 +13,7 @@
             <div class="card-body">
                 <form method="post">
                     {% csrf_token %}
-                    <div class="form-group">
-                        <label for="amount" class="form-label">Amount</label>
-                        <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="form-label">Date</label>
-                        <input type="date" class="form-control" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="category" class="form-label">Category</label>
-                        <select class="form-control" id="category" name="category" required>
-                            {% for category in categories %}
-                            <option value="{{ category.id }}">{{ category.name }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="notes" class="form-label">Notes</label>
-                        <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
-                    </div>
+                    {{ form.as_p }}
                     <button type="submit" class="btn btn-primary">Add Expense</button>
                 </form>
             </div>
