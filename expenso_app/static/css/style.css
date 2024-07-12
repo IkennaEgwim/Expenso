@@ -1,71 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-color: #333;
+    background-color: #007bff;
     color: white;
-    padding: 1rem;
-    text-align: center;
+    padding: 1rem 0;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
+nav .nav-link {
     color: white;
-    text-decoration: none;
 }
 
-main {
-    padding: 2rem;
+.messages .alert {
+    margin: 1rem 0;
 }
 
-h1 {
-    color: #333;
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    padding: 1rem 0;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.table th, .table td {
+    vertical-align: middle;
 }
 
-table, th, td {
-    border: 1px solid #ccc;
+.btn-sm {
+    margin-left: 0.5rem;
 }
 
-th, td {
-    padding: 0.5rem;
-    text-align: left;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form p {
-    margin: 0.5rem 0;
-}
-
-button {
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
+.list-group-item {
+    margin-bottom: 0.5rem;
 }
