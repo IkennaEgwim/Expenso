@@ -2,48 +2,52 @@
 {% block title %}Manage Categories - Expenso{% endblock %}
 
 {% block content %}
-<h1>Manage Categories</h1>
-<div class="card">
-    <div class="card-header">
-        Add Category
-    </div>
-    <div class="card-body">
-        <form method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="name" class="form-label">Category Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+<div class="row">
+    <div class="col-12">
+        <h1>Manage Categories</h1>
+        <div class="card">
+            <div class="card-header">
+                Add Category
             </div>
-            <button type="submit" class="btn btn-primary">Add Category</button>
-        </form>
-    </div>
-</div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name" class="form-label">Category Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Category</button>
+                </form>
+            </div>
+        </div>
 
-<div class="card mt-4">
-    <div class="card-header">
-        Existing Categories
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for category in categories %}
-                    <tr>
-                        <td>{{ category.name }}</td>
-                        <td>
-                            <a href="{% url 'edit_category' category.id %}" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="{% url 'delete_category' category.id %}" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+        <div class="card mt-4">
+            <div class="card-header">
+                Existing Categories
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for category in categories %}
+                            <tr>
+                                <td>{{ category.name }}</td>
+                                <td>
+                                    <a href="{% url 'edit_category' category.id %}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="{% url 'delete_category' category.id %}" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
