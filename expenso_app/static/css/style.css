@@ -1,54 +1,103 @@
+/* Base styling */
 body {
     font-family: 'Roboto', sans-serif;
+    background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
+/* Header styling */
 header {
-    background-color: #007bff;
+    background-color: rgba(0, 123, 255, 0.9);
     color: white;
     padding: 1rem 0;
+}
+
+.navbar .navbar-brand {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: green
 }
 
 .navbar .nav-link {
     color: white;
     margin-right: 1rem;
+    transition: color 0.3s;
 }
 
 .navbar .nav-link:hover {
     color: #ffc107;
 }
 
+/* Updated navbar link color */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+/* Footer styling */
 footer {
-    background-color: #f8f9fa;
+    background-color: rgba(248, 249, 250, 0.9);
     padding: 1rem 0;
     margin-top: 2rem;
     color: #6c757d;
 }
 
-.table-responsive {
-    margin-top: 1rem;
+/* Main content styling */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
 }
 
-.accordion-button {
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
     background-color: #007bff;
     color: white;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: #0056b3;
+.card-body {
+    padding: 1.5rem;
 }
 
-.accordion-button:not(.collapsed)::after {
-    filter: invert(100%);
+.card h2, .card h1 {
+    margin-bottom: 1rem;
+    color: #333;
 }
 
+/* Form styling */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary:hover {
@@ -56,10 +105,13 @@ footer {
     border-color: #0056b3;
 }
 
+/* Alert messages */
 .alert {
     margin-top: 1rem;
+    border-radius: 5px;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     header, footer {
         text-align: center;
@@ -73,7 +125,16 @@ footer {
         flex-direction: column;
     }
     
-    .table-responsive {
-        overflow-x: auto;
+    .container {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+    
+    .card-header {
+        text-align: center;
+    }
+    
+    .card-body {
+        padding: 1rem;
     }
 }
