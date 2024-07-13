@@ -1,36 +1,43 @@
 {% extends 'expenso_app/base.html' %}
 {% load static %}
 
+{% block title %}Manage Budgets - Expenso{% endblock %}
+
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Manage Budgets</h1>
-            <form method="post" class="mb-4">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Add Budget</button>
-            </form>
-            <h2>Existing Budgets</h2>
-            <div class="accordion" id="budgetAccordion">
-                {% for budget in budgets %}
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
-                            {{ budget.category.name }}: {{ budget.amount }} ({{ budget.month }})
-                        </button>
-                    </h2>
-                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#budgetAccordion">
-                        <div class="accordion-body">
-                            <div class="d-flex justify-content-end">
-                                <a href="{% url 'edit_budget' budget.id %}" class="btn btn-warning btn-sm me-2">Edit</a>
-                                <a href="{% url 'delete_budget' budget.id %}" class="btn btn-danger btn-sm">Delete</a>
-                            </div>
+<div class="row">
+    <div class="col-12">
+        <h1>Manage Budgets</h1>
+        <div class="card">
+            <div class="card-header">
+                Add New Budget
+            </div>
+            <div class="card-body">
+                <form method="post" class="mb-4">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Add Budget</button>
+                </form>
+            </div>
+        </div>
+        <h2 class="mt-4">Existing Budgets</h2>
+        <div class="accordion" id="budgetAccordion">
+            {% for budget in budgets %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
+                        {{ budget.category.name }}: {{ budget.amount }} ({{ budget.month }})
+                    </button>
+                </h2>
+                <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#budgetAccordion">
+                    <div class="accordion-body">
+                        <div class="d-flex justify-content-end">
+                            <a href="{% url 'edit_budget' budget.id %}" class="btn btn-warning btn-sm me-2">Edit</a>
+                            <a href="{% url 'delete_budget' budget.id %}" class="btn btn-danger btn-sm">Delete</a>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>

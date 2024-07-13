@@ -12,14 +12,14 @@
                     <h3 class="card-title">{{ welcome_message }}</h3>
                 </div>
                 <div class="card-body">
-                    <h4>Expenses</h4>
+                    <h1>Expenses</h1>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Amount</th>
                                     <th>Date</th>
                                     <th>Category</th>
+                                    <th>Amount</th>
                                     <th>Notes</th>
                                     <th>Actions</th>
                                 </tr>
@@ -27,9 +27,9 @@
                             <tbody>
                                 {% for expense in expenses %}
                                 <tr>
-                                    <td>{{ expense.amount }}</td>
                                     <td>{{ expense.date }}</td>
                                     <td>{{ expense.category.name }}</td>
+                                    <td>{{ expense.amount }}</td>
                                     <td>{{ expense.notes }}</td>
                                     <td>
                                         <a href="{% url 'edit_expense' expense.id %}" class="btn btn-warning btn-sm">Edit</a>
@@ -46,7 +46,7 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-header">
-                    <h4 class="card-title">Budgets and Remaining Amounts</h4>
+                    <h5 class="card-title">Budgets and Remaining Amounts</h5>
                 </div>
                 <div class="card-body">
                     <div class="accordion" id="budgetAccordion">
