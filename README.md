@@ -32,9 +32,8 @@ Expenso is the perfect tool for tracking expenses, managing budgets, and gaining
 - Budget Management: Set and monitor monthly budgets with alerts for overspending.
 - User-Friendly Interface: Enjoy a seamless experience across all devices with Expenso's responsive design.
 - Secure and Private: Robust security measures ensure your data is safe and accessible only to you.
-- Responsive Design: Enjoy a consistent experience across all screen sizes.
 - Reports and Visualizations: Generate detailed reports, view spending charts (coming soon).
-- 
+  
 The live application can be viewed here :  [expenso website](https://expenso-f0dd67831327.herokuapp.com/accounts/login/?next=/)
 
 # Purpose and Target Audience:
