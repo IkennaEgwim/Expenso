@@ -37,31 +37,44 @@ Expenso is the perfect tool for tracking expenses, managing budgets, and gaining
 The live application can be viewed here :  [expenso website](https://expenso-f0dd67831327.herokuapp.com/accounts/login/?next=/)
 
 # Purpose and Target Audience:
- **Problem Statement:** The Phone booth libraries are located all across the country making it possible for individuals to borrow and donate books to the collections at specified phone booths. The user finds it difficult to know which books are available prior to reaching the phone booth and is unable to communicate to other users that they have added a new book.
 
-**Purpose:** This book management app will list the available books and show if they are available to borrow. Users will also be able to add a book to the collection as well as edit and delete the book they have added to ensure the application is up-to-date.
+**Problem Statement:**
+Many individuals struggle to track expenses, manage budgets, and gain financial insights, leading to overspending and difficulty achieving financial goals.
 
-**Target Audience:** The primary target audience include avid readers who enjoy using phone booth libraries as well as individuals who want to be apart of a reading community where they can share their thoughts on the books they have completed in the collection.
+**Purpose:**
+Expenso provides an easy-to-use, accessible platform for expense tracking, budget management, and financial analysis, helping users make informed decisions and improve their financial health.
 
+**Target Audience:**
+Tech-savvy adults aged 25-40, including young professionals, couples, and small families, who want to take control of their finances and work towards financial goals.
 
 
 # Persona and User Stories:
 
-Emma is a passionate reader who loves immersing herself in different worlds through books. She spends most of her free time indulging in her favorite hobby and is always on the lookout for new and exciting reads. She has a phone booth library in her city and would like to view the books that are available to borrow prior to visiting. 
+Sarah, 28, is a busy marketing professional seeking better financial control. She uses Expenso to:
+
+- Track daily expenses across devices
+- View her financial status on a personalized dashboard
+- Add, edit, and delete expenses and categories
+- Set and monitor monthly budgets
+- Gain insights into spending habits
+
+Expenso helps Sarah manage her finances efficiently, reduce unnecessary spending, and work towards her goal of saving for a home. The app's user-friendly interface and cross-device accessibility fit well with her active lifestyle, allowing her to make informed financial decisions on the go.
 
 ## User Stories:
-* As an avid reader I want to be able to browse the available books at The Book Booth before visiting.
-* As a user I want to be able to add a book to the collection with the relevant information so that other users can view the latest books available in the phone booth library.
-* As a user I want to be able to create an account so that I can view the available books and book details.
-*  As an avid reader I want to be able to browse the available books at The Book Booth before visiting.
-* As a user I want to be able to edit and delete books that I have added so that the books stay up to date.
-* As a user I want to explore new books so that I can discover new books to read.
-* As a user I want to be able to read more information about a book so that I can be sure that the book is good choice for me.
-* As an admin I want to be able to moderate the book additions so that I can ensure the books are appropriate and relevant to the users.
-* As a user I want save money on books by borrowing books that myself and my family can enjoy so that we can spend money on other things we value.
+
+* As a new user, I want to register for an account so that I can start using the Expenso application to track my expenses and manage my budget.
+* As a registered user, I want to log in to my account so that I can access my personalized dashboard and manage my expenses and budget.
+* As a logged-in user, I want to view an overview of my expenses and budget on the dashboard so that I can quickly see my financial status and make informed decisions.
+* As a user, I want to add a new expense with details such as amount, date, category, and notes, so that I can keep track of my spending accurately.
+* As a user, I want to edit an existing expense, so that I can correct any mistakes or update the details as needed.
+* As a user, I want to delete an expense, so that I can remove any incorrect or unnecessary records from my expense list.
+* As a user, I want to add, edit, and delete expense categories, so that I can organize my expenses into relevant categories for better tracking.
+* As a user, I want to set, edit, and delete monthly budgets for different categories so that I can manage my spending limits and stay within my financial goals.
+* As a user, I want to see the remaining budget for each category after expenses are deducted, so that I can monitor my spending and adjust my habits accordingly.
+* As a user, I want to access the Expenso application on different devices, including mobile and desktop so that I can manage my expenses and budget on the go with a consistent and user-friendly interface.
 
 ## Wireframe & Initial Design:
-### Home Page
+### Login Page
 ![1](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/a17458a2-fd0b-45cb-af44-387ed524fef6)
 
 ### (Logged in) Browse books
