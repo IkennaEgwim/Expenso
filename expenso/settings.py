@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ikennaegwim-expenso-06ksa8d4i0d.ws-eu114.gitpod.io',
 '8000-ikennaegwim-expenso-89nupo1f4h9.ws.codeinstitute-ide.net',
@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'expenso.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #   'default': {
 #       'ENGINE': 'django.db.backends.postgres://ujmpqi6wszu:fAbdXJUmth9N@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/ride_coil_bulge_471635',
 #       'NAME': BASE_DIR / 'postgres://ujmpqi6wszu:fAbdXJUmth9N@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/ride_coil_bulge_471635',
 #   }
-#}
+# }
 
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
