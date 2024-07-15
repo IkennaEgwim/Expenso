@@ -19,7 +19,7 @@
 
   <p align="center">
 
-![Expenso Mockup Picture](https://github.com/IkennaEgwim/Expenso/expenso_app/static/images/expenso mockup.png)
+![Expenso Mockup Picture](./expenso_app/static/images/expenso%20mockup.png)
 
 Expenso is the perfect tool for tracking expenses, managing budgets, and gaining financial insights. Whether for personal use or managing household expenses, Expenso helps you stay on top of your finances effortlessly.
 

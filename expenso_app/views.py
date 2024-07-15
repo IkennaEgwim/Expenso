@@ -36,8 +36,13 @@ def home(request):
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
+
+    def form_valid(self, form):
+        user = form.save()
+        login(self.request, user)
+        messages.success(self.request, 'Your account has been created successfully!')
+        return redirect('dashboard')
 
 @login_required
 def dashboard(request):
@@ -45,7 +50,6 @@ def dashboard(request):
     categories = Category.objects.filter(user=request.user)
     budgets = Budget.objects.filter(user=request.user)
 
-   # Calculate the remaining budget for each category in each month
     remaining_budgets = {}
     for budget in budgets:
         if budget.category not in remaining_budgets:
