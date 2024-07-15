@@ -54,7 +54,6 @@ def dashboard(request):
     for budget in budgets:
         if budget.category not in remaining_budgets:
             remaining_budgets[budget.category.name] = {}
-
         month_expenses = expenses.filter(category=budget.category, date__month=MONTH_CHOICES_DICT[budget.month])
         total_expenses = month_expenses.aggregate(Sum('amount'))['amount__sum'] or 0
         remaining_budgets[budget.category.name][budget.month] = budget.amount - total_expenses

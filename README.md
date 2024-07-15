@@ -15,11 +15,11 @@
     </div>
   </a>
     
-  <h1 align="center">Expenso - Your Ultimate Expense Tracker</h1>
+  <h1 align="left">Expenso - Your Ultimate Expense Tracker</h1>
 
   <p align="center">
 
-![Expenso Mockup Picture](./expenso_app/static/images/expenso%20mockup.png)
+![Expenso Mockup Picture](./expenso_app/static/images/mockup.png)
 
 Expenso is the perfect tool for tracking expenses, managing budgets, and gaining financial insights. Whether for personal use or managing household expenses, Expenso helps you stay on top of your finances effortlessly.
 
@@ -68,6 +68,7 @@ Expenso helps Sarah manage her finances efficiently, reduce unnecessary spending
 * As a user, I want to set, edit, and delete monthly budgets for different categories so that I can manage my spending limits and stay within my financial goals.
 * As a user, I want to see the remaining budget for each category after expenses are deducted, so that I can monitor my spending and adjust my habits accordingly.
 * As a user, I want to access the Expenso application on different devices, including mobile and desktop so that I can manage my expenses and budget on the go with a consistent and user-friendly interface.
+* Expense Visualization: Interactive charts and graphs to visualize spending patterns (coming soon).
 
 ## Wireframe & Initial Design:
 ### Login Page
@@ -83,10 +84,49 @@ Expenso helps Sarah manage her finances efficiently, reduce unnecessary spending
 
 ![Book Details Wireframe](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/467fa65e-eb66-4b21-94af-f9090b6a54ab)
 
-## Agile:
-This project was created using Agile principles via a projectboard on Github. This is the first time I have implemented Agile as an individual developer. However, creating user stories and identifying accepterance criteria acted as a roadmap to target the various features and functionalities of the application. It helped me stay on track and reduced distractions.
+## Project Management and Development Approach:
 
-![project board](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/98b7d24d-7234-4155-af15-df72403659f9)
+This project was implemented using the Agile Manifesto methodology. Below are the ways this project adhered to the 4 core values and 12 core principles of the aforementioned method:
+
+<strong>Four Values of the Agile Manifesto:</strong>
+
+- Vision 1: Customer collaboration over contract negotiation: I worked with four(4) cohort mates who are my imaginary customers. We held **10** meetings through Google Meet Platform, ensuring alignment with user needs and prioritizing features through user story mapping.
+<br>
+
+
+- Vision 2: Responding to change over following a plan: Throughout the project, I managed
+  [![GitHub issues](https://img.shields.io/github/issues-closed/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) + [![GitHub issues](https://img.shields.io/github/issues/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) GitHub issues, adapting to changing requirements and feedback iteratively.
+<br>
+- Vision 3: Working software over comprehensive documentation: I achieved **15 story points** across **1 sprint**, emphasizing the focus on delivering functional software increments.
+
+<p align="left"><strong>A screenshot of Kanban Board.</strong></p>
+<img src="./expenso_app/static/images/Kanban_board.png" alt="Screenshot of the team's huddle" width="600" height="100%">
+<br>
+<p align="left"><strong>A screenshot of Issues used to create User Stories</strong></p>
+
+<img src="./expenso_app/static/images/UserStories_Issues.png" alt="Screenshot of the team's huddle" width="600" height="100%">
+
+<br>
+- Vision 4: Individuals and interactions over processes and tools: Daily interactions on GitHub led to over **65 commits**, fostering collaboration and knowledge sharing among team members.
+
+<br>
+
+<strong>Twelve Principles of the Agile Manifesto</strong>
+
+- Satisfy the customer: Held regular meetings to ensure alignment with user stories.
+- Deliver working software: Prioritized delivering functional increments in each sprint, allowing for early feedback.
+- Welcome changing requirements: Maintained open communication channels and adapted plans iteratively.
+- Collaborate daily: Conducted daily standup, catchup and stand-down to facilitate collaboration and problem-solving.
+- Face-to-face conversation: Utilized over 15 virtual meetings through slack huddle to enhance clarity and understanding.
+- Motivated individuals: Empowered team members through skill development and recognition.
+- Measure progress through working product: Evaluated progress based on delivered functionality in each sprint.
+- Promote sustainable development: Prioritized sustainability practices to ensure long-term success.
+- Simplicity is essential: Used MoSCoW prioritization and focused on MVP delivery to avoid unnecessary complexity.
+- Continuous attention to technical excellence: Adopted show and tell technique to ensure all team members learn while collaborating.
+- Self-organizing team: Encouraged autonomy and collaboration within the team.
+- Regular reflection on continuous improvement: Conducted regular retrospectives to identify areas for improvement.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 # Design Choices:
