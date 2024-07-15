@@ -11,11 +11,11 @@
 <br />
 <div>
   <a href="https://github.com/IkennaEgwim/Expenso">
-    <img src="./expenso_app/static/images/expenso logo.png" align="center" alt="Expenso Logo" width="120" height="120">
+    <img src="./expenso_app/static/images/logo.png" align="center" alt="Expenso Logo" width="120" height="120">
     </div>
   </a>
     
-  <h1 align="left">Expenso - Your Ultimate Expense Tracker</h1>
+  <h1 align="center">Expenso - Your Ultimate Expense Tracker</h1>
 
   <p align="center">
 
@@ -93,11 +93,12 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 - Vision 1: Customer collaboration over contract negotiation: I worked with four(4) cohort mates who are my imaginary customers. We held **10** meetings through Google Meet Platform, ensuring alignment with user needs and prioritizing features through user story mapping.
 <br>
 
-
 - Vision 2: Responding to change over following a plan: Throughout the project, I managed
   [![GitHub issues](https://img.shields.io/github/issues-closed/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) + [![GitHub issues](https://img.shields.io/github/issues/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) GitHub issues, adapting to changing requirements and feedback iteratively.
 <br>
+
 - Vision 3: Working software over comprehensive documentation: I achieved **15 story points** across **1 sprint**, emphasizing the focus on delivering functional software increments.
+<br>
 
 <p align="left"><strong>A screenshot of Kanban Board.</strong></p>
 <img src="./expenso_app/static/images/Kanban_board.png" alt="Screenshot of the team's huddle" width="600" height="100%">
@@ -108,7 +109,6 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 
 <br>
 - Vision 4: Individuals and interactions over processes and tools: Daily interactions on GitHub led to over **65 commits**, fostering collaboration and knowledge sharing among team members.
-
 <br>
 
 <strong>Twelve Principles of the Agile Manifesto</strong>
