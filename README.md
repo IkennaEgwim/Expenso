@@ -10,20 +10,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div>
-  <a href="https://codeinstitute.net/?nab=0">
-    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" align="left" alt="Project Logo" width="120" height="80">
-          <a href="https://github.com/Diana-is-Coding/R-P-S">
-    <img src="static/images/expenso logo.png" align="right" alt="Expenso Logo" width="120" height="90">
+  <a href="https://github.com/IkennaEgwim/Expenso">
+    <img src="./expenso_app/static/images/expenso logo.png" align="center" alt="Expenso Logo" width="120" height="120">
     </div>
   </a>
-  <br>
-  <br>
-  <br>
+    
   <h1 align="center">Expenso - Your Ultimate Expense Tracker</h1>
 
   <p align="center">
 
-![Expenso Mockup Picture (1)](https://github.com/IkennaEgwim/Expenso/expenso_app/static/images/background image2.png)
+![Expenso Mockup Picture](https://github.com/IkennaEgwim/Expenso/expenso_app/static/images/expenso%20login%20page.jpg)
 
 Expenso is the perfect tool for tracking expenses, managing budgets, and gaining financial insights. Whether for personal use or managing household expenses, Expenso helps you stay on top of your finances effortlessly.
 
