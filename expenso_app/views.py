@@ -31,8 +31,11 @@ MONTH_CHOICES_DICT = {
 }
 
 # Create your views here.
+
+
 def home(request):
     return render(request, 'expenso_app/home.html')
+
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
@@ -43,6 +46,7 @@ class SignUp(generic.CreateView):
         login(self.request, user)
         messages.success(self.request, 'Your account has been created successfully!')
         return redirect('dashboard')
+
 
 @login_required
 def dashboard(request):
@@ -67,6 +71,7 @@ def dashboard(request):
     }
     return render(request, 'expenso_app/dashboard.html', context)
 
+
 @login_required
 def add_expense(request):
     if request.method == 'POST':
@@ -81,6 +86,7 @@ def add_expense(request):
         form = ExpenseForm()
     return render(request, 'expenso_app/add_expense.html', {'form': form})
 
+
 @login_required
 def edit_expense(request, expense_id):
     expense = get_object_or_404(Expense, id=expense_id, user=request.user)
@@ -94,6 +100,7 @@ def edit_expense(request, expense_id):
         form = ExpenseForm(instance=expense)
     return render(request, 'expenso_app/edit_expense.html', {'form': form})
 
+
 @login_required
 def delete_expense(request, expense_id):
     expense = get_object_or_404(Expense, id=expense_id, user=request.user)
@@ -102,6 +109,7 @@ def delete_expense(request, expense_id):
         messages.success(request, f'Expense deleted successfully!')
         return redirect('dashboard')
     return render(request, 'expenso_app/delete_expense.html', {'expense': expense})
+
 
 @login_required
 def manage_categories(request):
@@ -118,6 +126,7 @@ def manage_categories(request):
     categories = Category.objects.filter(user=request.user)
     return render(request, 'expenso_app/manage_categories.html', {'form': form, 'categories': categories})
 
+
 @login_required
 def edit_category(request, category_id):
     category = get_object_or_404(Category, id=category_id, user=request.user)
@@ -131,6 +140,7 @@ def edit_category(request, category_id):
         form = CategoryForm(instance=category)
     return render(request, 'expenso_app/edit_category.html', {'form': form})
 
+
 @login_required
 def delete_category(request, category_id):
     category = get_object_or_404(Category, id=category_id, user=request.user)
@@ -139,6 +149,7 @@ def delete_category(request, category_id):
         messages.success(request, f'Category deleted successfully!')
         return redirect('manage_categories')
     return render(request, 'expenso_app/delete_category.html', {'category': category})
+
 
 @login_required
 def manage_budgets(request):
@@ -161,6 +172,7 @@ def manage_budgets(request):
     budgets = Budget.objects.filter(user=request.user)
     return render(request, 'expenso_app/manage_budgets.html', {'form': form, 'budgets': budgets})
 
+
 @login_required
 def edit_budget(request, budget_id):
     budget = get_object_or_404(Budget, id=budget_id, user=request.user)
@@ -173,6 +185,7 @@ def edit_budget(request, budget_id):
     else:
         form = BudgetForm(instance=budget)
     return render(request, 'expenso_app/edit_budget.html', {'form': form})
+
 
 @login_required
 def delete_budget(request, budget_id):
