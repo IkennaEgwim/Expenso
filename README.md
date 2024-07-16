@@ -34,6 +34,11 @@ Expenso is the perfect tool for tracking expenses, managing budgets, and gaining
   
 The live application can be viewed here :  [expenso website](https://expenso-f0dd67831327.herokuapp.com/accounts/login/?next=/)
 
+Feel free to test the app using the provided test credentials:
+
+- Login: user3
+- Password: Pa55word!
+
 # Purpose and Target Audience:
 
 **Problem Statement:**
@@ -70,17 +75,17 @@ Expenso helps Sarah manage her finances efficiently, reduce unnecessary spending
 * As a user, I want to set, edit, and delete monthly budgets for different categories so that I can manage my spending limits and stay within my financial goals.
 * As a user, I want to see the remaining budget for each category after expenses are deducted, so that I can monitor my spending and adjust my habits accordingly.
 * As a user, I want to access the Expenso application on different devices, including mobile and desktop so that I can manage my expenses and budget on the go with a consistent and user-friendly interface.
-* Expense Visualization: Interactive charts and graphs to visualize spending patterns (coming soon).
+* As a user, I want to acess interactive charts and graphs to visualize spending patterns (coming soon).
 
 ## Wireframe & Initial Design:
 ### Login Page
-![1](./expenso_app/static/documentation/wireframes/Login%20page.png)
+![Login Page wireframe](./expenso_app/static/readme_img/design/wireframes/login%20page.png)
 
 ### (Logged in) Dashboard
-![1](./expenso_app/static/documentation/wireframes/Dashboard.png)
+![Dashboard wireframe](./expenso_app/static/readme_img/design/wireframes/dashboard.png)
 
 ### (Mobile View) Add Expense
-![Add Expense wireframe](./expenso_app/static/documentation/wireframes/Mobile_view.png)
+![Add_Expense wireframe](./expenso_app/static//readme_img/design/wireframes/mobile_view.png)
 
 
 ## Project Management and Development Approach:
@@ -100,14 +105,15 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 <br>
 
 <p align="left"><strong>A screenshot of Kanban Board.</strong></p>
-<img src="./expenso_app/static/images/Kanban_board.png" alt="Screenshot of the team's huddle" width="600" height="100%">
+<img src="./expenso_app/static/readme_img/agile/kanban_board.png" alt="Screenshot of the team's huddle" width="600" height="100%">
 <br>
 <p align="left"><strong>A screenshot of Issues used to create User Stories</strong></p>
 
-<img src="./expenso_app/static/images/UserStories_Issues.png" alt="Screenshot of the team's huddle" width="600" height="100%">
+<img src="./expenso_app/static/readme_img/agile/userstories_Issues.png" alt="Screenshot of User stories issues" width="600" height="100%">
 
 <br>
 - Vision 4: Individuals and interactions over processes and tools: Daily interactions on GitHub led to over **65 commits**, fostering collaboration and knowledge sharing among team members.
+
 <br>
 
 <strong>Twelve Principles of the Agile Manifesto</strong>
@@ -127,39 +133,41 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<h1 id="design-and-styling">Design and Styling</h1>
 
-# Design Choices:
+<h3 id="design">Design:</h3>
 
-## Colour scheme:
+The design chosen for this project is a clean, modern, and professional look that ensures ease of use and readability. This approach is beneficial for a financial management tool, as it emphasizes clarity and organization, which are crucial for tracking expenses and managing budgets.
 
-#fafafa - Header
+<h3 id="color">Colour Scheme:</h3>
 
-Dark Green - Buttons
+**1.  Blue (#007bff):** This color was chosen as it conveys trust, reliability, and professionalism. Blue is calming and promotes a sense of order and efficiency, essential for a financial management application.
 
-#809977 - Footer
+**2. Green (Brand Color):** Symbolizes growth, harmony, and stability. Green is often associated with money and financial success, making it ideal for emphasizing the application's focus on financial management.
 
-The colours were selected with the intention of complementing the hero image and the idea was to ensure the image was appreciated.
+**3. Yellow (#ffc107):** Draws attention to important interactive elements. Yellow is vibrant and energetic, creating a sense of warmth and friendliness that enhances user engagement.
 
-## Typography:
- The following fonts were chosen for a clean and modern look that is both readable and minimal.
+**4. Gray (Medium Gray #6c757d):** Provides a neutral and calm backdrop that supports readability and focus. Medium gray maintains a sophisticated and professional look, adding contrast and depth to the design.
 
-Varta
+<h3 id="font">Font:</h3>
 
-Goudy Book Letter 1911
+**Main font: Roboto**
+
+Roboto is a modern, clean, and highly readable font. It works well in digital interfaces and ensures good readability across various screen sizes and resolutions.
 
 
-## Priority Features:
+## Features and Flow of the Expenso Application:
 
-### Home Page:
+### Login Page:
 
-#### Navbar & Hero Image:
-![home](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/4f033ade-4485-40c2-ac2d-5fc5641b5cb7)
+![home](./expenso_app/static/readme_img/features/login_page.png)
 
-The landing page provides an introduction to the website with a call to action button encouraging new users to sign up. Signing up and logging in allows them access to view the available books and to add a book to the collection.
+The Login/landing page provides an introduction to the website with a call to action button encouraging existing users to sign in and new users to sign up. Signing up and logging in allows them access to the dashboard to view the existing expenses and budgets, edit, add or delete entries. 
+
 The navigation bar is valuable for users as it provides quick and easy access to important sections of the website. The navigation bar includes links to Home, Books, Add a Book, Register/Logout and Sign In. Displaying a hero image using graphics are both aesthetic and a nod to the repurposed phone booths that have been transformed into local libraries around the world.
 
 
-#### Registration:
+### Registration:
 
 Registration allows users to view the available books and the relevant book details at The Book Booth library. It allows them to add a book as well as edit and delete their addition to ensure the book collection available is updated regularly. 
 
