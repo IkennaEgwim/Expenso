@@ -75,7 +75,7 @@ Expenso helps Sarah manage her finances efficiently, reduce unnecessary spending
 * As a user, I want to set, edit, and delete monthly budgets for different categories so that I can manage my spending limits and stay within my financial goals.
 * As a user, I want to see the remaining budget for each category after expenses are deducted, so that I can monitor my spending and adjust my habits accordingly.
 * As a user, I want to access the Expenso application on different devices, including mobile and desktop so that I can manage my expenses and budget on the go with a consistent and user-friendly interface.
-* As a user, I want to acess interactive charts and graphs to visualize spending patterns (coming soon).
+* As a user, I want to access interactive charts and graphs to visualize spending patterns (coming soon).
 
 ## Wireframe & Initial Design:
 ### Login Page
@@ -199,28 +199,18 @@ The form allows users to easily add a book to the library which will then be vis
 
 Users are able to find more information about the book they are interested in. The book details include the title, author and a brief summary of the book along with an book cover image. This provides users with sufficient information about the book.
 
-#### Footer:
-
-![footer](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fde543e6-0ee2-4c17-b8a8-436d4e824f4d)
-
-Links in the footer redirect to respective social media pages. 
-It allows users to stay connected with the The Book Booth on social media platforms, keeping them informed about any changes that may occur over time.
-
 
 # Future Features:
 
-* Implement a review system so readers can share their thoughts about books that they have completed. This will give others a better idea of whether the book is a good fit for them. 
-* Display if a book is available with a status (Available, Not Available).
-*  Allow users to reserve a book beforehand.
-* A search engine where users can search for books by title, author and genre.
-* Provide locations of nearest libraries.
-* Provide a way for the users to engage and form a secure community.
-* Include an about page to inform others of how The Book Booth Library works and how to use it.
+- Expense Reports: Generate detailed expense reports for any given period.
+- Notifications: Alerts for budget thresholds and other important updates.
+- Localization: Multi-language support for a global user base.
+- Charts and Visualisation: Interactive charts and graphs to visualize spending patterns
 
 
 Database Design:
 
-![ERD](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/6db92c85-0b4c-485c-b60d-709df3fb963e)
+![ERD](./expenso_app/static/readme_img/features/model%20databases.png)
 
 
 Entity Relationship Diagrams (ERD) help the developer to make connections between databases and information. Creating an ERD helped me understand how the tables relate to one another. I used LucidChart to create the diagram and the arrow represent how the data fields relate to one another.
