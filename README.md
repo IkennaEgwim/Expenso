@@ -19,7 +19,9 @@
 
   <p align="center">
 
-![Expenso Mockup Picture](./expenso_app/static/images/mockup.png)
+  <a  href="https://IkennaEgwim.github.io/Expenso/">
+<img src="./expenso_app/static/images/mockup.png"  alt="Product Screenshot" width="600" height="600" align="top">
+</a>
 
 Expenso is the perfect tool for tracking expenses, managing budgets, and gaining financial insights. Whether for personal use or managing household expenses, Expenso helps you stay on top of your finances effortlessly.
 
@@ -72,17 +74,14 @@ Expenso helps Sarah manage her finances efficiently, reduce unnecessary spending
 
 ## Wireframe & Initial Design:
 ### Login Page
-![1](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/a17458a2-fd0b-45cb-af44-387ed524fef6)
+![1](./expenso_app/static/documentation/wireframes/Login%20page.png)
 
-### (Logged in) Browse books
-![1](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/a4c56a06-3692-467d-813a-ba3797d3087c)
+### (Logged in) Dashboard
+![1](./expenso_app/static/documentation/wireframes/Dashboard.png)
 
-### Add a Book
-![Add a book wireframe](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/c0379553-0906-4d77-aca6-beb8fc6834d9)
+### (Mobile View) Add Expense
+![Add Expense wireframe](./expenso_app/static/documentation/wireframes/Mobile_view.png)
 
-### Book Detail Page
-
-![Book Details Wireframe](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/467fa65e-eb66-4b21-94af-f9090b6a54ab)
 
 ## Project Management and Development Approach:
 
