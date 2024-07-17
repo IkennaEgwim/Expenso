@@ -495,17 +495,91 @@ The technologies implemented in this application included HTML5, CSS, Bootstrap,
 * CSS
 * Python
 
-# Deployment :
+<h2 id="deployment-and-credits">SECTION 5: DEPLOYMENT AND CREDITS</h2>
 
-I used the steps used when deploying our django blog to deploy this application. The instructions for this mainly came from the follow along videos and text-steps provided on the code institute LMS.
+In this section, I will outline the process of deploying the tested and validated product, as well as acknowledge the external resources and inspirations utilized during this exercise.
 
-# Bugs
+<h2 id="final-product">Final Product</h2>
 
-All the bugs that occured during the creation of this application have been resolved. There is a section of the application which allows you to reset your password that needs to be implemented, however they were not within the scope of this particular project and will be addressed in the near future along with the other future features.
+The product is live and can be seen on **[url of deployed site]**
 
+### _Home Page_
 
-# Credit: 
+<p align="center">
+<img src="assets/images/readme/desktop-home-page.png" width="600" height="100%">
+</p>
 
+Here are some screenshots of various sections of the final product:
+
+### _Task Management Page_
+
+<p align="center">
+<img src="assets/images/readme/desktop-task-page.png" width="600" height="100%">
+</p>
+
+### _Dashboard_
+
+<p align="center">
+<img src="assets/images/readme/desktop-dashboard.png" width="600" height="100%">
+</p>
+
+- Add images of other relevant sections of the final product as shown above.
+
+<h2 id="deployment-process">Deployment Process</h2>
+
+The deployment process for Tasktopia involved several steps to ensure that the application is running smoothly on a live server. Here's an overview of the steps I followed:
+
+1. **Preparing the Environment:**
+
+   - Ensured that all necessary dependencies were listed in the `requirements.txt` file.
+   - Set up environment variables for sensitive information like database credentials and API keys.
+
+2. **Choosing a Hosting Service:**
+   - Selected [Heroku](https://www.heroku.com/) for deploying the application due to its ease of use and support for Python applications.
+3. **Deploying the Application:**
+
+   - Pushed the code to a GitHub repository.
+   - Connected the GitHub repository to Heroku.
+   - Configured the Heroku environment with necessary buildpacks and settings.
+   - Deployed the application directly from the GitHub repository.
+
+4. **Testing the Live Application:**
+   - Conducted thorough testing on the live application to ensure all features were working as expected.
+   - Fixed any issues that arose during the live testing phase.
+
+### Deployment via Heroku
+
+Deploying Tasktopia to Heroku was a straightforward and efficient process. Here’s a brief overview of the steps I followed:
+
+1. **Create a Heroku Account:**
+
+   - I signed up for a Heroku account at [Heroku's website](https://www.heroku.com/).
+
+2. **Install Heroku CLI:**
+
+   - I installed the Heroku Command Line Interface (CLI) on my local machine to manage the deployment process.
+
+3. **Prepare the Application for Heroku:**
+
+   - Added a `Procfile` to specify the commands Heroku should run to start the application.
+   - Included `requirements.txt` and `runtime.txt` files to specify dependencies and the Python version.
+
+4. **Deploy the Application:**
+
+   - Logged into Heroku using the CLI: `heroku login`
+   - Created a new Heroku app: `heroku create`
+   - Pushed the code to Heroku: `git push heroku main`
+   - Configured environment variables via the Heroku dashboard or CLI.
+
+5. **Monitor and Manage:**
+   - Used the Heroku dashboard to monitor the application’s performance and logs.
+   - Made necessary adjustments to ensure the application runs smoothly on the live server.
+
+<h2 id="credits">Credits</h2>
+
+<h3 id="template">Template</h3>
+
+- This template was adopted and adapted from README.md templates published by [Chibueze C. Igwe](https://github.com/scientistigwe/README-Template)
 * Although I used the django blog resources provided on the LMS, I also received alot of additional clarification by following along with django projects on YouTube. One of the vidoes I found especially helpful was : https://youtu.be/JzDBCZTgVyw?si=w3BBwJswUjBTm1xw
 
 * Stack Overflow was used to solve any smaller bugs and further clarification on errors I was receiving in the terminal.
@@ -519,3 +593,36 @@ All the bugs that occured during the creation of this application have been reso
 * Font Awesome was used for icons and the fonts used were derived from Google Fonts.
 
 * Wireframes, logo and flowcharts were created using Canva. 
+
+<h3 id="content">Content</h3>
+
+- All content was written by **Chibueze C. Igwe**.
+
+<h3 id="media2">Media</h3>
+
+- All images used in the project were sourced from [Google Image Search](https://www.google.com).
+
+<!-- ACKNOWLEDGMENTS -->
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+I would like to extend my gratitude to the following resources that contributed significantly to the success of this project:
+
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [GitHub](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+
+<!-- CONTACT -->
+<h2 id="contact">Contact</h2>
+
+If you have any questions or feedback, feel free to reach out:
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+</section>
+
+
+
