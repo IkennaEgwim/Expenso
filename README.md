@@ -98,7 +98,7 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 <br>
 
 - Vision 2: Responding to change over following a plan: Throughout the project, I managed
-  [![GitHub issues](https://img.shields.io/github/issues-closed/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) + [![GitHub issues](https://img.shields.io/github/issues/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) GitHub issues, adapting to changing requirements and feedback iteratively.
+  [![GitHub issues](https://img.shields.io/github/issues-closed/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) + [![GitHub issues](https://img.shields.io/github/issues/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) GitHub issues, adapting to changing requirements and feedback iteratively. 
 <br>
 
 - Vision 3: Working software over comprehensive documentation: I achieved **15 story points** across **1 sprint**, emphasizing the focus on delivering functional software increments.
@@ -106,6 +106,7 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 
 <p align="left"><strong>A screenshot of Kanban Board.</strong></p>
 <img src="./expenso_app/static/readme_img/agile/kanban_board.png" alt="Screenshot of the team's huddle" width="600" height="100%">
+<br>
 <br>
 <p align="left"><strong>A screenshot of Issues used to create User Stories</strong></p>
 
@@ -141,17 +142,19 @@ The design chosen for this project is a clean, modern, and professional look tha
 
 <h3 id="color">Colour Scheme:</h3>
 
-**1.  Blue (#007bff):** This color was chosen as it conveys trust, reliability, and professionalism. Blue is calming and promotes a sense of order and efficiency, essential for a financial management application.
+**1.  Blue (#007BFF):** This color was chosen as it conveys trust, reliability, and professionalism. Blue is calming and promotes a sense of order and efficiency, essential for a financial management application.
 
-**2. Green (Brand Color):** Symbolizes growth, harmony, and stability. Green is often associated with money and financial success, making it ideal for emphasizing the application's focus on financial management.
+**2. Green (#00FF00):** This is our brand color as we choose it as it symbolizes growth, harmony, and stability. Green is often associated with money and financial success, making it ideal for emphasizing the application's focus on financial management.
 
-**3. Yellow (#ffc107):** Draws attention to important interactive elements. Yellow is vibrant and energetic, creating a sense of warmth and friendliness that enhances user engagement.
+**3. Yellow (#FFC107):** Draws attention to important interactive elements. Yellow is vibrant and energetic, creating a sense of warmth and friendliness that enhances user engagement.
 
-**4. Gray (Medium Gray #6c757d):** Provides a neutral and calm backdrop that supports readability and focus. Medium gray maintains a sophisticated and professional look, adding contrast and depth to the design.
+**4. Gray (Medium Gray #6C757D):** Provides a neutral and calm backdrop that supports readability and focus. Medium gray maintains a sophisticated and professional look, adding contrast and depth to the design.
 
 <h3 id="font">Font:</h3>
 
-**Main font: Roboto**
+**Main font:**  Roboto
+
+**Secondary font:** N/A ((Roboto is used uniformly across the application for consistency and readability)
 
 Roboto is a modern, clean, and highly readable font. It works well in digital interfaces and ensures good readability across various screen sizes and resolutions.
 
@@ -162,43 +165,80 @@ Roboto is a modern, clean, and highly readable font. It works well in digital in
 
 ![home](./expenso_app/static/readme_img/features/login_page.png)
 
-The Login/landing page provides an introduction to the website with a call to action button encouraging existing users to sign in and new users to sign up. Signing up and logging in allows them access to the dashboard to view the existing expenses and budgets, edit, add or delete entries. 
+The login/landing page provides a welcoming header and a brief introduction to the application, highlighting its purpose. The user navigates to the login page, enters username and password, then submits the form. If credentials are correct, user is directed to the dashboard. It also provides a link for the user to sign up of they don't have an account.
 
-The navigation bar is valuable for users as it provides quick and easy access to important sections of the website. The navigation bar includes links to Home, Books, Add a Book, Register/Logout and Sign In. Displaying a hero image using graphics are both aesthetic and a nod to the repurposed phone booths that have been transformed into local libraries around the world.
-
-
-### Registration:
-
-Registration allows users to view the available books and the relevant book details at The Book Booth library. It allows them to add a book as well as edit and delete their addition to ensure the book collection available is updated regularly. 
-
-![signup](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0b6b2b83-d426-4e63-805b-09a6dcdde550)
+#### Features of the Login Page:
+- User Authentication: Allows users to enter their username and password to log in.
+- Form Validation: Ensures that the fields are filled out before submission.
+- Error Handling: Displays an error message if the login credentials are incorrect.
+- Navigation: Provides a link to the signup page for new users.
 
 
 
-#### Sign In:
-
-![sign-in](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/6a1d9a16-2211-4403-88a1-3ec1b506cef4)
+### Sign Up:
 
 
-#### Books:
+![signup](./expenso_app/static/readme_img/features/sign_up%20page.png)
 
-![books](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/54c96d8e-6bc3-403f-a8ad-1c4188b60a6e)
+The sign up page allows users to create an account to be able to use the application. New user navigates to the signup, fills out the registration form (no email required) and submits the form. Account is created and user receives a success message. User is automatically logged in and redirected to their dashbaord, where they can begin add expense, create category or add a budget. 
+
+#### Features of the Sign Up page:
+- User Registration: Allows new users to create an account by providing a username and password.
+- Form Validation: Ensures all fields are correctly filled before submission.
+- Navigation: Provides a link to the login page for existing users.
+
+### Dashboard:
+
+![books](./expenso_app/static/readme_img/features/dashboard.png)
+
+The dashboard page provides an overview of the user's financial status, recent expenses and budget performance. The user is redirected here once they log in, and from here the user can navigate to different sections using the provided links. 
+
+#### Features of the Dashboard page:
+- Overview: Provides an overview of the user's financial status, recent expenses, and budget performance.
+- Navigation Links: Quick access to add expenses, manage categories, and manage budgets.
+- Charts and Graphs: Visual representation of expenses and budget data (coming soon).
 
 
-#### Add a Book:
+### Add Expense:
 
-![add a book](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/8e15c1d9-193f-4032-b147-0969c3b45bab)
-
-
-The form allows users to easily add a book to the library which will then be visible on the  books page for the users to browse. Users are also able to edit and delete a book they themselves have added giving them full control over their own contributions.
+![add a book](./expenso_app/static/readme_img/features/add_expense.png)
 
 
-#### Book Details:
+The form allows users to easily add a new expense which will then be visible on the Dashboard page. Users are also able to edit and delete an expense on the dashboard giving them full control of the application. 
 
-![book detail](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e88f0274-670b-4a76-8ef8-7c44a5f440a7)
+The flow is as follows:
+- User navigates to the add expense page from the dashboard or navbar.
+- User fills out the expense form.
+- User submits the form.
+- Expense is added to the user's record, and user is redirected back to the dashboard or receives a success message.
 
-Users are able to find more information about the book they are interested in. The book details include the title, author and a brief summary of the book along with an book cover image. This provides users with sufficient information about the book.
+#### Features of the Add Expense page:
+- Expense Form: Allows users to enter details of a new expense including amount, category, and date.
+- Form Validation: Ensures all required fields are filled out correctly.
+- Submission Handling: Processes the form data and adds the expense to the user's records.
 
+
+### Manage Categories:
+
+![book detail](./expenso_app/static/readme_img/features/manage_categories.png)
+
+Users are able to add new categories, edit or delete existing categories for better financial management. The changes made here are saved and the updated list is displayed.
+
+#### Features of the Manage Categories page:
+- Add Category: Allows users to create new categories for expenses.
+- Existing Categories List: Displays a list of existing categories with options to edit or delete.
+- Form Validation: Ensures the new category name is provided.
+
+### Manage Budgets:
+
+![book detail](./expenso_app/static/readme_img/features/manage_budgets.png)
+
+The Manage Budgets page allows users to set new budgets using the provided form. Here users can also edit or delete existing budgets, with changes saved and the updated budget list displayed.
+
+#### Features:
+- Add Budget: Allows users to set a budget for different categories.
+- Existing Budgets List: Displays a list of existing budgets with options to edit or delete.
+- Form Validation: Ensures all required fields are filled out correctly.
 
 # Future Features:
 
@@ -208,7 +248,7 @@ Users are able to find more information about the book they are interested in. T
 - Charts and Visualisation: Interactive charts and graphs to visualize spending patterns
 
 
-Database Design:
+#### Database Design:
 
 ![ERD](./expenso_app/static/readme_img/features/model%20databases.png)
 
@@ -219,35 +259,49 @@ Entity Relationship Diagrams (ERD) help the developer to make connections betwee
 ## Data Models:
 
 
-| Book   |            |   |
+| User   |            |   |
 |----------|:-------------:|------:|
-| Title |  CharField |  |
-| Author |  CharField   |   FK |
-| ISBN | CharField |     |
-| User |  CharField | FK |
-| Genre |  CharField   |   FK |
-| Language | CharField |  FK   |
-| Summary |  TextField |  |
+| id |  Autofield |  PK|
+| username |  CharField   |   FK |
+| email | EmailField |     |
+| password |  CharField | FK |
 
 
 
-| Genre   |            |   |
+
+| Expense   |            |   |
 |----------|:-------------:|------:|
-| Category |  CharField | FK |
+|id |  Autofield |  PK |
+| user |  CharField   |   FK |
+| amount |  DecimalField   |    |
+| description | CharField |    |
+| date |  DateTimeField   |    |
+| category |  CharField | FK |
 
-
-| Language   |            |   |
+| Category   |            |   |
 |----------|:-------------:|------:|
-| Language |  CharField | FK  |
+|id |  Autofield |  PK |
+| user |  CharField   |   FK |
+| name |  CharField   |    |
 
-| Author  |            |   |
+
+| Budget  |            |   |
 |----------|:-------------:|------:|
-| Name |  CharField | FK  |
+|id |  Autofield |  PK |
+| user |  CharField   |   FK |
+| category |  CharField | FK  |
+| amount |  DecimalField  |    |
+| month |  CharField  |    |
+
+
+
 
 ## User Flow Chart:
-![The Book Booth Flowchart](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7727f007-8e2e-45fc-b955-57e2d50d1e98)
+![Expenso Flowchart](./expenso_app/static/images/flow_chart.png)
 
-The Flowchart served as an efficient way to make important decisions when creating the app. It helped me narrow down which decisions were important for the users and admin as well as establishing the appropriate authentication. It also helped me decide which features were the most important i.e adding a book and viewing a list of books that are available to borrow at The Book Booth Library.
+
+
+The Flowchart served as an efficient way to make important decisions when creating the app. It helped me narrow down which decisions were important for the users and admin as well as establishing the appropriate authentication. It also helped me decide which features were the most important.
 
 # Validation
 ## HTML
