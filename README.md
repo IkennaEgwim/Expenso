@@ -148,18 +148,18 @@ The design chosen for this project is a clean, modern, and professional look tha
 
 **3. Yellow (#FFC107):** Draws attention to important interactive elements. Yellow is vibrant and energetic, creating a sense of warmth and friendliness that enhances user engagement.
 
-**4. Gray (Medium Gray #6C757D):** Provides a neutral and calm backdrop that supports readability and focus. Medium gray maintains a sophisticated and professional look, adding contrast and depth to the design.
+**4. Medium Gray (#6C757D):** Provides a neutral and calm backdrop that supports readability and focus. Medium gray maintains a sophisticated and professional look, adding contrast and depth to the design.
 
 <h3 id="font">Font:</h3>
 
 **Main font:**  Roboto
 
-**Secondary font:** N/A ((Roboto is used uniformly across the application for consistency and readability)
+**Secondary font:** N/A (Roboto is used uniformly across the application for consistency and readability)
 
 Roboto is a modern, clean, and highly readable font. It works well in digital interfaces and ensures good readability across various screen sizes and resolutions.
 
 
-## Features and Flow of the Expenso Application:
+# Features
 
 ### Login Page:
 
@@ -240,7 +240,7 @@ The Manage Budgets page allows users to set new budgets using the provided form.
 - Existing Budgets List: Displays a list of existing budgets with options to edit or delete.
 - Form Validation: Ensures all required fields are filled out correctly.
 
-# Future Features:
+## Future Features:
 
 - Expense Reports: Generate detailed expense reports for any given period.
 - Notifications: Alerts for budget thresholds and other important updates.
@@ -248,7 +248,7 @@ The Manage Budgets page allows users to set new budgets using the provided form.
 - Charts and Visualisation: Interactive charts and graphs to visualize spending patterns
 
 
-#### Database Design:
+## Database Design:
 
 ![ERD](./expenso_app/static/readme_img/features/model%20databases.png)
 
@@ -304,11 +304,12 @@ Entity Relationship Diagrams (ERD) help the developer to make connections betwee
 The Flowchart served as an efficient way to make important decisions when creating the app. It helped me narrow down which decisions were important for the users and admin as well as establishing the appropriate authentication. It also helped me decide which features were the most important.
 
 # Validation
+
 ## HTML
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2F) | ![home page validate](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/2ba0ff6e-6159-47e9-ad4c-2fe954589ca8) | Pass: button is a descendant of a tag |
+| Home/Login | [W3C](https://validator.w3.org/nu/) | ![home page validate](./expenso_app/static/readme_img/testing/login_page2.png) | Pass: no errors |
 | Books | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Fbooks%2Fbooks%2F) | ![Validate Books page](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/b7c018c4-a68a-43ee-97c5-778658bbf705) | Pass: No Errors |
 | Add a Book | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Fbooks%2Fadd_book%2F) | ![validate adda book page](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/95eb01b9-22fc-43c4-93de-0ebcd1263467) | Pass: No Errors |
 | Sign In| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Faccounts%2Flogin%2F) | ![validate sign in](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/872629ce-e50d-4870-845b-ed699f9178dc) | Pass: No Errors |
