@@ -337,74 +337,57 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 |  models.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![models py](./expenso_app/static/readme_img/testing/models.py.png)| Pass: No Errors |
 
 # Responsiveness:
-Development tools were used to test responsiveness on varying sized devices including laptop, mobile and tablet size.
+- **Cross Browser Compatibility Testing**
+  I ensured compatibility with Chrome, Opera, Microsoft Edge, and Firefox desktop browsers and verified responsiveness using Chrome Developer Tools across various devices including:
 
-Full testing was performed on the following devices:
+  - Desktop
+  - Laptop
+  - Moto G4
+  - Galaxy S5
+  - iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus
+  - iPad, iPad Pro
+  - Galaxy Fold
 
-Laptops:
+<div align="center">
 
-* Macbook Air 2018 13.3-inch screen
-* Lenovo Thinkpad 14" screen
+**Firefox**
+<img src="./accounts/static/registration/images/cbt-firefox.png" width="100%" align="top" alt="Cross Website Testing - Firefox">
 
- Mobile Devices:
-* Google Pixel 4a
+</div>
+<br>
+<div align="center">
 
- * Browser Compatibility:
- 
- I have tested the site using the following browsers:
+**Google Chrome**
+<img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Chrome">
 
-* Google Chrome
-
-![chrome](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/545ba4e5-c7bc-4fd8-8660-1444dcb3be2a)
-
-
-* Microsoft Edge
-
-![microsoft edge](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/1570a9cd-6591-45db-840b-ecbe7f7aeb5b)
-
-
-I can confirm that the site is responsive and looks as expected good on different screen sizes.
-
-
-Mobile devices:
-
-![Screenshot_20231207-234024](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0f0b0d7d-a72f-43a4-8a57-bc1cf02a1367)
-
-![Screenshot_20231207-234033](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/4c3cc202-b8f6-4f9d-b1bd-cf57c911db65)
-
-![Screenshot_20231207-234013](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/39989e07-4e8d-4faf-8b57-e11686792b38)
-
-
-![0](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/211095bf-ffac-42ca-b1c8-2a45d8444038)
-
-![Screenshot_20231207-234117 (1)](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e52d022b-d3fb-4f6c-8fcb-092386ce566b)
-
-![Screenshot_20231208-000014](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0cd224f9-b46e-4db9-9260-999cc63fff90)
-
-
-
-
-
-Tablet Devices:
-
-
-![homepage](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/5e6eb5c7-4aba-434c-8ed8-8bfd56632f8a)
-
-![signup tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/c5f5a237-83ee-4ef3-b9b0-444f648ca225)
-
-![sign in tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/9ac1d08b-d4b8-4aa5-a65b-e46040f3b60b)
-
-![books tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/a9c42d34-a49a-48ed-97ba-660c02de3543)
-
-![tabletadd](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/b516d61d-6e21-460a-b7f4-5b18abf41d00)
-
-![bookdetails tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/17a0f099-ae15-4b8a-887b-254beac2dbb0)
-
-
-
-
+</div>
 
 # Testing:
+
+- **Cross Browser Compatibility Testing**
+  I ensured compatibility with Chrome, Opera, Microsoft Edge, and Firefox desktop browsers and verified responsiveness using Chrome Developer Tools across various devices including:
+
+  - Desktop
+  - Laptop
+  - Moto G4
+  - Galaxy S5
+  - iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus
+  - iPad, iPad Pro
+  - Galaxy Fold
+
+<div align="center">
+
+**Firefox**
+<img src="./accounts/static/registration/images/cbt-firefox.png" width="100%" align="top" alt="Cross Website Testing - Firefox">
+
+</div>
+<br>
+<div align="center">
+
+**Google Chrome**
+<img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Chrome">
+
+</div>
 
 ## Lighthouse Audit:
 
@@ -413,27 +396,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 * On a laptop:
 
-Home
-
-![homeaudit](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/5fa9bac2-d4bf-47fe-bb4a-50b3b0c4938b)
-
-Books 
-
-![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/d6401b01-e4d5-4ed1-b8e9-ff6d5eeb4bd9)
-
-Add a book 
-![audit add book](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e429ee62-ecbe-4b2f-8521-28da15773a46)
 
 On a mobile device:
 
 Home 
 ![audit home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
 
-Books
-![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fad662af-54da-45d0-b381-c0d70955e4e4)
-
-Add a book 
-![audit addbookmobile](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/634965ca-1b9d-4aa1-bd17-bda89f9fbafe)
 
 
 ## Links
@@ -441,33 +409,17 @@ Add a book
 | Link | Expected Outcome | Grade |
 | ------- | ---------------- | ----- |
 | Logo | Navigates to the home page when clicked | Fail |
-| Home | Navigates to the home page when clicked | Pass |
-| Books | Navigates to a book list  page when clicked | Pass |
-| Add a Book | Navigates to a form to add a book when clicked | Pass |
-| Register | Navigates to a registration form when clicked | Pass |
+| Manage Budget | Navigates to a form to set, edit on delete a budget when clicked | Pass |
+| Manage Category | Navigates to a form to add, edit or delete an expense when clicked | Pass |
+| Add Expense | Navigates to a form to add an expense when clicked | Pass |
+| Sign Up | Navigates to a registration form when clicked | Pass |
 | Log in | Navigates to a screen where users can log in when clicked | Pass |
 | Logout | Navigates to a page confirming for the user to log out | Pass |
+| Create category | Click 'Add new' button	Prompt to enter new category name. Create new category. Redirect to list of categories | Pass |
+| Edit category | Click Edit icon	Prompt to update category name. Update. Redirect to list of categories	 | Pass |
+| Delete category | Click Delete icon	Prompt to confirm delete action. Delete. Redirect to list of categories  | Pass |
 
-## Testing 
-
-
-| Feature | Expected Outcome | Grade | Screenshots |
-| ------- | ---------------- | ----- | --------- |
-| Modal | A message will appear informing the user of a successful action | Pass | ![modal sign out ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/9e8658e8-f751-4cdf-be3d-ca19ad6c47b2)
-| User logged in | Text displays the user logged in with their username | Pass | ![modal sign in name](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/cc4a71db-9962-49c1-b4b6-563000687ad7)
-| View books | Users can see available books which have been added | Pass | ![testing books](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/01cc3a5b-db46-4742-a8e1-cf715d78c89b)
-| Add a book | Add a book to the book collection that will be available to borrow | Pass | ![addbook](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/82133f44-d43a-4f40-863a-f4e8970057aa)
-| Admin has access to crud functionality of all additions | Admin can edit or delete any book addition | Pass | ![admin testing](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/72df0b87-6d4f-4659-9d4f-5e986f88e16c)
-| Edit a book | A user can edit the details on the book that they have addded. It will update their addition on the books page | Pass | ![edit book ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/79f6de7e-fd14-4c34-a474-483b7cd5285f)
-| Delete a book | A user who added a book OR an admin can delete a book. It will then be deleted from the DB | Pass | ![delete book](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/88275723-e875-404a-b96f-58bac0a4907a)
-| Registration | New users can access a registration form from the "Register" link | Pass | ![testing sign up](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e9e6c4e1-c90a-4854-a11c-014a8fc80043)
-| Log in | Users can log in using a form after clicking "Log in" | Pass | ![sign in testing ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/3fafee34-e6d6-4162-8989-faa78e1bf355)
-| Log out | Users get logged out after clicking "Log out" | Pass | ![testing sign out](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/d7d377aa-fc2d-4025-a73e-22d2d81c622a)
-| Grid display | A CSS grid will display the books in a clear, responsive format | Pass | N/A
-| Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/67cfb78d-7d5b-4072-8aa8-812b9c444b67)
-| Footer | A footer displays social information | Pass | ![footer](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0879fada-18a4-4363-8257-0af0061cf79f)
-| Social links work | The social links will navigate to a new page when they're clicked. They will open in a new tab | Pass | ![footer](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0879fada-18a4-4363-8257-0af0061cf79f)
-
+<br>
 
 # Tools and Technologies Used:
 The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
@@ -480,10 +432,9 @@ The technologies implemented in this application included HTML5, CSS, Bootstrap,
 * Bootstrap used as the front-end CSS framework for modern responsiveness and pre-built components.
 * ElephantSQL used as the Postgres database.
 * Heroku used for hosting the deployed back-end site.
-* Cloudinary used for online static file storage.
-* Canva Utilized for collaborative design and prototyping(wireframes).
+* Balsamiq Utilized for collaborative design and prototyping(wireframes).
 
-* Google and Stack Overflow utilized for general research or solving a bug, information gathering, and various online tools.
+* Google and ChatGPT for general research or solving a bug, information gathering, and various online tools.
 
 
 # Languages Used:
@@ -573,18 +524,13 @@ Deploying Tasktopia to Heroku was a straightforward and efficient process. Hereâ
 
 <h2 id="credits">Credits</h2>
 
-<h3 id="template">Template</h3>
 
-- This template was adopted and adapted from README.md templates published by [Chibueze C. Igwe](https://github.com/scientistigwe/README-Template)
+- This template was adopted and adapted from README.md templates published by [Chibueze C. Igwe](https://github.com/scientistigwe/README-Template) and [Hibi Ibrahim](https://github.com/hiboibrahim/thebookbooth1?tab=readme-ov-file)
 * Although I used the django blog resources provided on the LMS, I also received alot of additional clarification by following along with django projects on YouTube. One of the vidoes I found especially helpful was : https://youtu.be/JzDBCZTgVyw?si=w3BBwJswUjBTm1xw
 
-* Stack Overflow was used to solve any smaller bugs and further clarification on errors I was receiving in the terminal.
-
-* I used this site to generate a persona and created user stories: https://founderpal.ai/user-persona-generator
+* ChatGPT was used for for troubleshooting and some of the content generation.
 
 * A special thanks to all the other indivudals in our cohort for their continuous support throughout the course.
-
-* The added book covers and details were taken from the Waterstones Website.
 
 * Font Awesome was used for icons and the fonts used were derived from Google Fonts.
 
