@@ -13,15 +13,16 @@ class ExpenseForm(forms.ModelForm):
         widgets = {
             'date': DateInput(),
         }
-        
+
 
 class CategoryForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = ['name']
-        
+
 
 class BudgetForm(forms.ModelForm):
     class Meta:
         model = Budget
         fields = ['category', 'amount', 'month']
+        

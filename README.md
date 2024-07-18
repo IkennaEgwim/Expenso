@@ -307,7 +307,7 @@ The Flowchart served as an efficient way to make important decisions when creati
 
 ## HTML
 
-| Page | W3C Validation URL | Screenshot | Notes |
+| Page | Expenso W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Login (Home)  | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Faccounts%2Flogin%2F) | ![home page validate](./expenso_app/static/readme_img/testing/login_page2.png) | Pass: no errors |
 | Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Fsignup%2F) | ![Validate sign up](./expenso_app/static/readme_img/testing/signup2.png) | Undisclosed elements and tag |
@@ -320,7 +320,7 @@ The Flowchart served as an efficient way to make important decisions when creati
 
  I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
  
-| File | Jigsaw URL | Screenshot | Notes |
+| File | Expenso Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![validate css](./expenso_app/static/readme_img/testing/style_css.png) | Pass: No Errors |
 
@@ -330,16 +330,11 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ike) | ![screenshot]![forms py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f299346f-bb44-43a2-a8a5-868373d753e3)
- | Pass: No Errors |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/boutique-ado/settings.py) | ![screenshot]![settings py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7951202c-2d55-4adb-90d6-8fef0707c82c)
- | Pass: No Errors |
-| Book views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/blog/views.py) | ![screenshot]![views py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/4f545d53-b304-4600-b9fb-d4feb93b6c93)
- | Pass: No Errors |
-| Book urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/checkout/urls.py) | ![screenshot]![urls py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e3f52187-1f65-4171-b1ba-e9096d1b5fc0)
- | Pass: No Errors |
-|  models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/profiles/models.py) | ![screenshot]![models py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f3438ec1-f275-44b6-847d-48a93c0466ed)
- | Pass: No Errors |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![forms py](./expenso_app/static/readme_img/testing/forms.py.png)| Pass: No Errors |
+| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![settings py](./expenso_app/static/readme_img/testing/settings.py.png) | Pass: E501 line too long |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![views py](./expenso_app/static/readme_img/testing/views.py.png)| Pass: E501 line too long |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![urls py](./expenso_app/static/readme_img/testing/urls.py.png)| Pass: E501 line too long|
+|  models.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![models py](./expenso_app/static/readme_img/testing/models.py.png)| Pass: No Errors |
 
 # Responsiveness:
 Development tools were used to test responsiveness on varying sized devices including laptop, mobile and tablet size.
