@@ -307,13 +307,14 @@ The Flowchart served as an efficient way to make important decisions when creati
 
 ## HTML
 
-| Page | W3C URL | Screenshot | Notes |
+| Page | W3C Validation URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home/Login | [W3C](https://validator.w3.org/nu/) | ![home page validate](./expenso_app/static/readme_img/testing/login_page2.png) | Pass: no errors |
-| Books | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Fbooks%2Fbooks%2F) | ![Validate Books page](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/b7c018c4-a68a-43ee-97c5-778658bbf705) | Pass: No Errors |
-| Add a Book | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Fbooks%2Fadd_book%2F) | ![validate adda book page](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/95eb01b9-22fc-43c4-93de-0ebcd1263467) | Pass: No Errors |
-| Sign In| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Faccounts%2Flogin%2F) | ![validate sign in](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/872629ce-e50d-4870-845b-ed699f9178dc) | Pass: No Errors |
-| Register| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2Faccounts%2Fsignup%2F) | ![validate sign up](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/c5e042af-b3d5-4718-bc50-ef319ba1a1c3) | unclosed elements main and div |
+| Login (Home)  | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Faccounts%2Flogin%2F) | ![home page validate](./expenso_app/static/readme_img/testing/login_page2.png) | Pass: no errors |
+| Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Fsignup%2F) | ![Validate sign up](./expenso_app/static/readme_img/testing/signup2.png) | Undisclosed elements and tag |
+| Dashboard | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2F) | ![validate dashboard](./expenso_app/static/readme_img/testing/dashboard2.png) | Pass: No Errors |
+| Add_Expense | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Fadd-expense%2F) | ![validate sign in](./expenso_app/static/readme_img/testing/add_expense2.png) | Pass: No Errors |
+| Manage_Categories| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Fmanage-categories%2F) | ![validate manage categories](./expenso_app/static/readme_img/testing/manage_categories2.png) | Pass: No Errors |
+| Manage_Budgets| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2Fmanage-budgets%2F) | ![validate manage budgets](./expenso_app/static/readme_img/testing/manage_budgets2.png) | Pass: No Errors |
 
  ## CSS
 
@@ -321,7 +322,7 @@ The Flowchart served as an efficient way to make important decisions when creati
  
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthebookbooth1-559d9131718c.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=enhttps://jigsaw.w3.org/css-validator/validator) | ![validate css](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/200fc160-1092-4cd0-bba4-2ab1a721eb72) | Pass: No Errors |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fexpenso-f0dd67831327.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![validate css](./expenso_app/static/readme_img/testing/style_css.png) | Pass: No Errors |
 
 ## Python
 
@@ -329,7 +330,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/run.py) | ![screenshot]![forms py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f299346f-bb44-43a2-a8a5-868373d753e3)
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ike) | ![screenshot]![forms py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/f299346f-bb44-43a2-a8a5-868373d753e3)
  | Pass: No Errors |
 | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/hiboibrahim/thebookbooth1/main/boutique-ado/settings.py) | ![screenshot]![settings py](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7951202c-2d55-4adb-90d6-8fef0707c82c)
  | Pass: No Errors |
