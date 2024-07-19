@@ -403,7 +403,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Link | Expected Outcome | Grade |
 | ------- | ---------------- | ----- |
-| Logo | Navigates to the home page when clicked | Fail |
 | Sign Up | Navigates to a registration form when clicked | Pass |
 | Log in | Navigates to a screen where users can log in when clicked | Pass |
 | Logout | Logs the user out | Pass |
@@ -413,9 +412,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Edit category | Click Edit icon to update category name. Updates  Redirect to list of categories	 | Pass |
 | Delete category | Click Delete icon	Prompt to confirm delete action. Delete. Redirect to list of categories  | Pass |
 | Manage Budget | Navigates to a form to set, edit on delete a budget when clicked | Pass |
-
-
-
+| Add Budget | Click 'Add Budget' button	to add a new category name | Pass |
 
 
 <br>
@@ -443,8 +440,9 @@ The development of the Expenso application leveraged a range of tools and techno
 - Balsamiq: Utilized for collaborative design and prototyping, particularly for creating wireframes.
 - Lucidchart and Mermaid: Used for creating the user flow diagram, aiding in clear visualization of the application's workflow.
 - Google and ChatGPT: Leveraged for general research, information gathering, and troubleshooting to resolve development challenges efficiently.
+- Am I Responsive: Used to check if the site is responsive on different screen sizes.
 - Canva: Employed for designing the application logo, contributing to brand identity.
-- Lighthouse - Used for auditing and improving performance, accessibility, best practices, and SEO, ensuring a high-quality user experience.
+- Lighthouse: Used for auditing and improving performance, accessibility, best practices, and SEO, ensuring a high-quality user experience.
 
 ### Languages Used:
 * HTML5
@@ -525,6 +523,7 @@ Deploying Expenso to Heroku was a straightforward and efficient process. Here’
 - **ChatGPT** - For providing AI-driven information gathering and troubleshooting support.
 - **Google** - For being an indispensable search engine for research and troubleshooting.
 - **Lighthouse** - Used for auditing and improving performance, accessibility, best practices, and SEO, ensuring a high-quality user experience.
+- **Am I Responsive** - Used to check if the site is responsive on different screen sizes.
 
 ### Acknowledgements
 
