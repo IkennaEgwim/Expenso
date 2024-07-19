@@ -415,7 +415,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## User Story Testing
 
-| User Story | Expected Outcome   | Grade | Screenshots |
+| User Story / Feature | Expected Outcome   | Grade | Screenshots |
 | ------- | ------------------ | ----- | --------- |
 | User Registration | New users can access a registration form from the "Sign Up" link | Pass | ![testing sign up](./expenso_app/static/readme_img/features/sign_up%20page.png)
 | User Login/Logout | Users can log in using a form after clicking "Log in" and log out after clicking "Log out". | Pass | ![sign in testing ](./expenso_app/static/readme_img/testing/browswe-chrome.png)
