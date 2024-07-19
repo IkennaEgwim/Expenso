@@ -9,7 +9,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div>
+<div align ="center">
   <a href="https://github.com/IkennaEgwim/Expenso">
     <img src="./expenso_app/static/images/logo.png" align="center" alt="Expenso Logo" width="120" height="120">
     </div>
@@ -26,7 +26,7 @@
 
 Expenso is the perfect tool for tracking expenses, managing budgets, and gaining financial insights. Whether for personal use or managing household expenses, Expenso helps you stay on top of your finances effortlessly.
 
-**Key Features**
+**Key Features:**
 - Expense Tracking: Easily log and categorize daily expenses.
 - Budget Management: Set and monitor monthly budgets with alerts for overspending.
 - User-Friendly Interface: Enjoy a seamless experience across all devices with Expenso's responsive design.
@@ -34,7 +34,7 @@ Expenso is the perfect tool for tracking expenses, managing budgets, and gaining
 - Secure and Private: Robust security measures ensure your data is safe and accessible only to you.
 - Reports and Visualizations: Generate detailed reports, view spending charts (coming soon).
   
-The live application can be viewed here :  [expenso website](https://expenso-f0dd67831327.herokuapp.com/accounts/login/?next=/)
+The live application can be viewed here:  [Live Preview](https://expenso-f0dd67831327.herokuapp.com/accounts/login/?next=/)
 
 Feel free to test the app using the provided test credentials:
 
@@ -134,7 +134,6 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 - Self-organizing team: Encouraged autonomy and collaboration within the team.
 - Regular reflection on continuous improvement: Conducted regular retrospectives to identify areas for improvement.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <h1 id="design-and-styling">Design and Styling</h1>
 
@@ -157,9 +156,7 @@ The design chosen for this project is a clean, modern, and professional look tha
 **Main font:**  Roboto
 
 **Secondary font:** N/A (Roboto is used uniformly across the application for consistency and readability)
-
-Roboto is a modern, clean, and highly readable font. It works well in digital interfaces and ensures good readability across various screen sizes and resolutions.
-
+<br>
 
 # Features
 
@@ -237,7 +234,7 @@ Users are able to add new categories, edit or delete existing categories for bet
 
 The Manage Budgets page allows users to set new budgets using the provided form. Here users can also edit or delete existing budgets, with changes saved and the updated budget list displayed.
 
-#### Features:
+#### Features of the Manage Budgets page:
 - Add Budget: Allows users to set a budget for different categories.
 - Existing Budgets List: Displays a list of existing budgets with options to edit or delete.
 - Form Validation: Ensures all required fields are filled out correctly.
@@ -422,59 +419,40 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 <br>
 
 # Tools and Technologies Used
-The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
+The development of the Expenso application leveraged a range of tools and technologies to ensure a robust, scalable, and user-friendly experience. Below is a comprehensive list of the tools and technologies employed:
 
-* Python used as the back-end programming language.
-* Git used for version control. (git add, git commit, git push)
-* GitHub used for secure online code storage.
-* GitHub Pages used for hosting the deployed front-end site.
-* Gitpod used as a cloud-based IDE for development.
-* Bootstrap used as the front-end CSS framework for modern responsiveness and pre-built components.
-* PostgreSQL used for pre-deployment test and production phase.
-* Google and ChatGPT for general research, information gathering and troubleshooting.
-* Heroku used for hosting the deployed back-end site.
-* Balsamiq Utilized for collaborative design and prototyping(wireframes).
+### Technologies Implemented:
+
+- HTML5: For structuring the web pages and content.
+- CSS: For styling the web pages to enhance visual appeal.
+- Bootstrap: As the front-end CSS framework to achieve modern responsiveness and utilize pre-built components.
+- Python: Used as the back-end programming language, providing powerful and efficient server-side logic.
+- Django: A robust and scalable framework offering built-in features for rapid development.
+
+### Tools Used:
 
 
-## Languages Used:
+- Git: Employed for version control to manage code changes effectively using commands like git add, git commit, and git push.
+- GitHub: Used for secure online code storage and collaboration.
+- GitHub Pages: Utilized for hosting the deployed front-end site.
+- Gitpod: A cloud-based Integrated Development Environment (IDE) used for seamless development.
+- PostgreSQL: Used for the pre-deployment test and production database management.
+- Heroku: Used for hosting the deployed back-end site, ensuring reliable and scalable server infrastructure.
+- Balsamiq: Utilized for collaborative design and prototyping, particularly for creating wireframes.
+- Lucidchart and Mermaid: Used for creating the user flow diagram, aiding in clear visualization of the application's workflow.
+- Google and ChatGPT: Leveraged for general research, information gathering, and troubleshooting to resolve development challenges efficiently.
+- Canva: Employed for designing the application logo, contributing to brand identity.
+
+### Languages Used:
 * HTML5
 * CSS
 * Python
 
-
 # Deployment and Credits
 
-In this section, I will outline the process of deploying the tested and validated product, as well as acknowledge the external resources and inspirations utilized during this exercise.
+### Deployment Process
 
-<h2 id="final-product">Final Product</h2>
-
-The product is live and can be seen on **[Live Preview](https://expenso-f0dd67831327.herokuapp.com/accounts/login/)**
-
-### _Home Page_
-
-<p align="center">
-<img src="assets/images/readme/desktop-home-page.png" width="600" height="100%">
-</p>
-
-Here are some screenshots of various sections of the final product:
-
-### _Task Management Page_
-
-<p align="center">
-<img src="assets/images/readme/desktop-task-page.png" width="600" height="100%">
-</p>
-
-### _Dashboard_
-
-<p align="center">
-<img src="assets/images/readme/desktop-dashboard.png" width="600" height="100%">
-</p>
-
-- Add images of other relevant sections of the final product as shown above.
-
-<h2 id="deployment-process">Deployment Process</h2>
-
-The deployment process for Tasktopia involved several steps to ensure that the application is running smoothly on a live server. Here's an overview of the steps I followed:
+The deployment process Expenso involved several steps to ensure that the application is running smoothly on a live server. Here's an overview of the steps I followed:
 
 1. **Preparing the Environment:**
 
@@ -496,7 +474,7 @@ The deployment process for Tasktopia involved several steps to ensure that the a
 
 ### Deployment via Heroku
 
-Deploying Tasktopia to Heroku was a straightforward and efficient process. Here’s a brief overview of the steps I followed:
+Deploying Expenso to Heroku was a straightforward and efficient process. Here’s a brief overview of the steps I followed:
 
 1. **Create a Heroku Account:**
 
@@ -522,54 +500,41 @@ Deploying Tasktopia to Heroku was a straightforward and efficient process. Here�
    - Used the Heroku dashboard to monitor the application’s performance and logs.
    - Made necessary adjustments to ensure the application runs smoothly on the live server.
 
-<h2 id="credits">Credits</h2>
+# Credits
 
 
-- This template was adopted and adapted from README.md templates published by [Chibueze C. Igwe](https://github.com/scientistigwe/README-Template) and [Hibi Ibrahim](https://github.com/hiboibrahim/thebookbooth1?tab=readme-ov-file)
-* Although I used the django blog resources provided on the LMS, I also received alot of additional clarification by following along with django projects on YouTube. One of the vidoes I found especially helpful was : https://youtu.be/JzDBCZTgVyw?si=w3BBwJswUjBTm1xw
-
-* ChatGPT was used for for troubleshooting and some of the content generation.
-
-* A special thanks to all the other indivudals in our cohort for their continuous support throughout the course.
-
-* Font Awesome was used for icons and the fonts used were derived from Google Fonts.
-
-* Wireframes, logo and flowcharts were created using Canva. 
-
-* Stack Overflow: [How to redirect to previous page in Django after POST request](https://stackoverflow.com/questions/35796195/how-to-redirect-to-previous-page-in-django-after-post-request) 
-* YouTube: [Django To Do List App With User Registration & Login](https://www.youtube.com/watch?v=llbtoQTt4qw)
-
-<h3 id="content">Content</h3>
-
-- All content was written by **[Ikenna Egwim](https://github.com/IkennaEgwim)**.
-
-<h3 id="media2">Media</h3>
-
-- Images used in the project were sourced from [Google Image Search](https://www.google.com).
-
-<!-- ACKNOWLEDGMENTS -->
-<h2 id="acknowledgments">Acknowledgments</h2>
-
-I would like to extend my gratitude to the following resources that contributed to the success of this project:
-
-- Samantha Dartnall, my Code Institute mentor, for her support and precious guidance throughout the course.
-- [TravelTimN](https://github.com/TravelTimN), Code Institute instructor. I found Tim's repository to be an excellent resource, providing practical examples and helping me better understand some key concepts in practice.
-- I would like to extend my gratitude to CodeInstitute for empowering me to do this project.
-
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-- [Malven's Grid Cheatsheet](https://grid.malven.co/)
-- [GitHub](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
+### Special Thanks:
+- CodeInstitute - For teaching and providing foundational knowledge essential for this project..
+- Iris Smok - For her invaluable guidance and support throughout the project.
 
 
+### Tools and Resources:
+- **Bootstrap** - For its robust front-end framework, enabling responsive, mobile-first web development.
+- **Django** - For being a high-level Python web framework that fosters rapid development and clean, pragmatic design.
+- **Git** - For version control, tracking changes, and managing collaborative development.
+- **GitHub** - For offering a reliable platform for version control, collaboration, and hosting the project repository.
+- **Heroku** - For providing a platform as a service (PaaS) that simplifies building, running, and operating applications in the cloud.
+- **PostgreSQL** - For its powerful and open-source object-relational database system.
+- **Gitpod** - For offering a cloud-based integrated development environment, enhancing development efficiency.
+- **Balsamiq** - For its user-friendly wireframing tool, essential in designing user interfaces.
+- **Lucidchart & Mermaid** - For their excellent online diagram software, used to create flowcharts and diagrams.
+- **Canva** - Design tool used for creating the application logo.
+- **ChatGPT** - For providing AI-driven information gathering and troubleshooting support.
+- **Google** - For being an indispensable search engine for research and troubleshooting.
 
-<!-- CONTACT -->
-<h2 id="contact">Contact</h2>
+### Acknowledgements
 
-If you have any questions or feedback, feel free to reach out: 
+- [Hibo Ibrahim's The Book Booth](https://github.com/hiboibrahim/thebookbooth1?tab=readme-ov-file.) - for serving as an example of good Django project documentation.
+- Open Source Community - For contributing to the development of the various tools and libraries used in this project.
 
+### Content
+- All content was written by [Ikenna Egwim](https://github.com/IkennaEgwim).
+
+
+# Contact
+
+
+If you have any questions or feedback, feel free to reach out:
 [GitHub Link](https://github.com/IkennaEgwim)
 
 
