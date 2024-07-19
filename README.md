@@ -29,6 +29,7 @@ Expenso is the perfect tool for tracking expenses, managing budgets, and gaining
 - Expense Tracking: Easily log and categorize daily expenses.
 - Budget Management: Set and monitor monthly budgets with alerts for overspending.
 - User-Friendly Interface: Enjoy a seamless experience across all devices with Expenso's responsive design.
+- Robust CRUD Operations: Efficiently handles Create, Read, Update, and Delete operations for ensuring smooth data management.
 - Secure and Private: Robust security measures ensure your data is safe and accessible only to you.
 - Reports and Visualizations: Generate detailed reports, view spending charts (coming soon).
   
@@ -365,7 +366,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 # Testing:
 
 - **Cross Browser Compatibility Testing**
-  I ensured compatibility with Chrome, Opera, Microsoft Edge, and Firefox desktop browsers and verified responsiveness using Chrome Developer Tools across various devices including:
+  I ensured compatibility with Chrome, Microsoft Edge, and Firefox desktop browsers and verified responsiveness using Chrome Developer Tools across various devices including:
 
   - Desktop
   - Laptop
@@ -387,6 +388,9 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 **Google Chrome**
 <img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Chrome">
 
+**Microsoft Edge**
+<img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Microsoft Edge">
+
 </div>
 
 ## Lighthouse Audit:
@@ -397,9 +401,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 * On a laptop:
 
 
-On a mobile device:
+![audit home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
 
-Home 
+
+
+* on a mobile device:
+
 ![audit home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
 
 
@@ -421,7 +428,7 @@ Home
 
 <br>
 
-# Tools and Technologies Used:
+# Tools and Technologies Used
 The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
 
 * Python used as the back-end programming language.
@@ -430,25 +437,25 @@ The technologies implemented in this application included HTML5, CSS, Bootstrap,
 * GitHub Pages used for hosting the deployed front-end site.
 * Gitpod used as a cloud-based IDE for development.
 * Bootstrap used as the front-end CSS framework for modern responsiveness and pre-built components.
-* ElephantSQL used as the Postgres database.
+* PostgreSQL used for pre-deployment test and production phase.
+* Google and ChatGPT for general research, information gathering and troubleshooting.
 * Heroku used for hosting the deployed back-end site.
 * Balsamiq Utilized for collaborative design and prototyping(wireframes).
 
-* Google and ChatGPT for general research or solving a bug, information gathering, and various online tools.
 
-
-# Languages Used:
+## Languages Used:
 * HTML5
 * CSS
 * Python
 
-<h2 id="deployment-and-credits">SECTION 5: DEPLOYMENT AND CREDITS</h2>
+
+# Deployment and Credits
 
 In this section, I will outline the process of deploying the tested and validated product, as well as acknowledge the external resources and inspirations utilized during this exercise.
 
 <h2 id="final-product">Final Product</h2>
 
-The product is live and can be seen on **[url of deployed site]**
+The product is live and can be seen on **[www.expenso.com](https://expenso-f0dd67831327.herokuapp.com/accounts/login/)**
 
 ### _Home Page_
 
