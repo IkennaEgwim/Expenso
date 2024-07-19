@@ -97,27 +97,26 @@ This project was implemented using the Agile Manifesto methodology. Below are th
 <strong>Four Values of the Agile Manifesto:</strong>
 
 - Vision 1: Customer collaboration over contract negotiation: I worked with four(4) cohort mates who are my imaginary customers. We held **10** meetings through Google Meet Platform, ensuring alignment with user needs and prioritizing features through user story mapping.
-<br>
+
 
 - Vision 2: Responding to change over following a plan: Throughout the project, I managed
   [![GitHub issues](https://img.shields.io/github/issues-closed/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) + [![GitHub issues](https://img.shields.io/github/issues/IkennaEgwim/Expenso)](https://github.com/IkennaEgwim/Expenso/issues) GitHub issues, adapting to changing requirements and feedback iteratively. 
-<br>
+
 
 - Vision 3: Working software over comprehensive documentation: I achieved **15 story points** across **1 sprint**, emphasizing the focus on delivering functional software increments.
-<br>
+
 
 <p align="left"><strong>A screenshot of Kanban Board.</strong></p>
 <img src="./expenso_app/static/readme_img/agile/kanban_board.png" alt="Screenshot of the team's huddle" width="600" height="100%">
-<br>
-<br>
+
+
 <p align="left"><strong>A screenshot of Issues used to create User Stories</strong></p>
 
 <img src="./expenso_app/static/readme_img/agile/userstories_Issues.png" alt="Screenshot of User stories issues" width="600" height="100%">
 
-<br>
+
 - Vision 4: Individuals and interactions over processes and tools: Daily interactions on GitHub led to over **65 commits**, fostering collaboration and knowledge sharing among team members.
 
-<br>
 
 <strong>Twelve Principles of the Agile Manifesto</strong>
 
@@ -379,7 +378,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 |Dashboard Page Not Loading|Identified and fixed issues in the dashboard view, ensuring that data is correctly fetched and rendered.| Closed|
 |CSRF Token Errors| Ensured that all forms include {% csrf_token %} and that the CSRF middleware is properly configured.| Closed|
 |Static Files Error: Directory '/workspace/Expenso/static' in the STATICFILES_DIRS setting does not exist.|Created the missing static directory and ensured the correct path is set in STATICFILES_DIRS.|Closed|
-
+<br>
 
 ## Lighthouse Audit:
 
