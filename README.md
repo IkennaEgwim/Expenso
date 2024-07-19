@@ -158,6 +158,8 @@ The design chosen for this project is a clean, modern, and professional look tha
 **Secondary font:** N/A (Roboto is used uniformly across the application for consistency and readability)
 <br>
 
+Roboto font is ideal for Expenso due to its modern and clean design, high readability, and versatility, ensuring a professional appearance and consistent user experience across all devices.
+
 # Features
 
 ### Login Page:
@@ -354,16 +356,16 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Device| Screenshort|
 |:-------:|:-------:|
-|Desktop|![Desktop](/readme-img/testing/responsive-desktop.png)|
-|Tablet |![Tablet](/readme-img/testing/responsive-tablet.png)|
-|Mobile |![Mobile](/readme-img/testing/responsive-mobile.png)|
+|Desktop|![Desktop](./expenso_app/static/readme_img/testing/responsive_desktop.png)|
+|Tablet |![Tablet](./expenso_app/static/readme_img/testing/responsive_tablet.png)|
+|Mobile |![Mobile](./expenso_app/static/readme_img/testing/responsive_mobile.png)|
 
 ### Browser Compatibility:
 | Browser | Screenshot | Notes|
 |:-------:|:-------:|:-------:|
-| Chrome  | ![Chrome](/readme-img/testing/browser-chrome.png) |
-| Mozilla Firefox|![Firefox](/readme-img/testing/browser-firefox.png)  |
-| Microsoft Edge|![Edge](/readme-img/testing/browser-edge.png) |
+| Chrome  | ![Chrome](./expenso_app/static/readme_img/testing/browswe-chrome.png) |
+| Mozilla Firefox|![Firefox](./expenso_app/static/readme_img/testing/browser-firefox.png)  |
+| Microsoft Edge|![Edge](./expenso_app/static/readme_img/testing/browser-edge.png) |
 
 ### Bugs: 
 
@@ -384,16 +386,16 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 
-* On a laptop:
+* **On a desktop:**
 
 
-![audit home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
+![audit home mobile ](./expenso_app/static/readme_img/testing/lighthouse_desktop.png)
 
 
 
-* on a mobile device:
+* **on a mobile device:**
 
-![audit home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
+![audit home mobile ](./expenso_app/static/readme_img/testing/lighthouse_mobile.png)
 
 
 
@@ -442,6 +444,7 @@ The development of the Expenso application leveraged a range of tools and techno
 - Lucidchart and Mermaid: Used for creating the user flow diagram, aiding in clear visualization of the application's workflow.
 - Google and ChatGPT: Leveraged for general research, information gathering, and troubleshooting to resolve development challenges efficiently.
 - Canva: Employed for designing the application logo, contributing to brand identity.
+- Lighthouse - Used for auditing and improving performance, accessibility, best practices, and SEO, ensuring a high-quality user experience.
 
 ### Languages Used:
 * HTML5
@@ -521,6 +524,7 @@ Deploying Expenso to Heroku was a straightforward and efficient process. Here’
 - **Canva** - Design tool used for creating the application logo.
 - **ChatGPT** - For providing AI-driven information gathering and troubleshooting support.
 - **Google** - For being an indispensable search engine for research and troubleshooting.
+- **Lighthouse** - Used for auditing and improving performance, accessibility, best practices, and SEO, ensuring a high-quality user experience.
 
 ### Acknowledgements
 
