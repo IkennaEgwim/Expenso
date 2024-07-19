@@ -36,7 +36,7 @@ Expenso is the perfect tool for tracking expenses, managing budgets, and gaining
   
 The live application can be viewed here:  [Live Preview](https://expenso-f0dd67831327.herokuapp.com/accounts/login/?next=/)
 
-Feel free to test the app using the provided test credentials:
+Feel free to test the app using below provided test credentials:
 
 - Login: user3
 - Password: Pa55word!
