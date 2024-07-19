@@ -19,9 +19,10 @@
 
   <p align="center">
 
-  <a  href="https://IkennaEgwim.github.io/Expenso/">
-<img src="./expenso_app/static/images/mockup.png"  alt="Product Screenshot" width="600" height="600" align="top">
-</a>
+<div align="center">
+<img src="./expenso_app/static/images/mockup.png" width="100%" align="top" alt="Project Logo">
+</div>
+<br>
 
 Expenso is the perfect tool for tracking expenses, managing budgets, and gaining financial insights. Whether for personal use or managing household expenses, Expenso helps you stay on top of your finances effortlessly.
 
@@ -447,7 +448,7 @@ In this section, I will outline the process of deploying the tested and validate
 
 <h2 id="final-product">Final Product</h2>
 
-The product is live and can be seen on **[www.expenso.com](https://expenso-f0dd67831327.herokuapp.com/accounts/login/)**
+The product is live and can be seen on **[Live Preview](https://expenso-f0dd67831327.herokuapp.com/accounts/login/)**
 
 ### _Home Page_
 
@@ -535,18 +536,25 @@ Deploying Tasktopia to Heroku was a straightforward and efficient process. Hereâ
 
 * Wireframes, logo and flowcharts were created using Canva. 
 
+* Stack Overflow: [How to redirect to previous page in Django after POST request](https://stackoverflow.com/questions/35796195/how-to-redirect-to-previous-page-in-django-after-post-request) 
+* YouTube: [Django To Do List App With User Registration & Login](https://www.youtube.com/watch?v=llbtoQTt4qw)
+
 <h3 id="content">Content</h3>
 
-- All content was written by **Chibueze C. Igwe**.
+- All content was written by **[Ikenna Egwim](https://github.com/IkennaEgwim)**.
 
 <h3 id="media2">Media</h3>
 
-- All images used in the project were sourced from [Google Image Search](https://www.google.com).
+- Images used in the project were sourced from [Google Image Search](https://www.google.com).
 
 <!-- ACKNOWLEDGMENTS -->
 <h2 id="acknowledgments">Acknowledgments</h2>
 
-I would like to extend my gratitude to the following resources that contributed significantly to the success of this project:
+I would like to extend my gratitude to the following resources that contributed to the success of this project:
+
+- Samantha Dartnall, my Code Institute mentor, for her support and precious guidance throughout the course.
+- [TravelTimN](https://github.com/TravelTimN), Code Institute instructor. I found Tim's repository to be an excellent resource, providing practical examples and helping me better understand some key concepts in practice.
+- I would like to extend my gratitude to CodeInstitute for empowering me to do this project.
 
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
@@ -555,15 +563,15 @@ I would like to extend my gratitude to the following resources that contributed 
 - [GitHub](https://pages.github.com)
 - [Font Awesome](https://fontawesome.com)
 
+
+
 <!-- CONTACT -->
 <h2 id="contact">Contact</h2>
 
-If you have any questions or feedback, feel free to reach out:
+If you have any questions or feedback, feel free to reach out: 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+[GitHub Link](https://github.com/IkennaEgwim)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-</section>
 
 
 
