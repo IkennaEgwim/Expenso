@@ -337,35 +337,13 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![urls py](./expenso_app/static/readme_img/testing/urls.py.png)| Pass: E501 line too long|
 |  models.py | [PEP8 CI](https://pep8ci.herokuapp.com) | ![models py](./expenso_app/static/readme_img/testing/models.py.png)| Pass: No Errors |
 
-# Responsiveness:
-- **Cross Browser Compatibility Testing**
-  I ensured compatibility with Chrome, Opera, Microsoft Edge, and Firefox desktop browsers and verified responsiveness using Chrome Developer Tools across various devices including:
-
-  - Desktop
-  - Laptop
-  - Moto G4
-  - Galaxy S5
-  - iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus
-  - iPad, iPad Pro
-  - Galaxy Fold
-
-<div align="center">
-
-**Firefox**
-<img src="./accounts/static/registration/images/cbt-firefox.png" width="100%" align="top" alt="Cross Website Testing - Firefox">
-
-</div>
 <br>
-<div align="center">
 
-**Google Chrome**
-<img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Chrome">
+# Testing
 
-</div>
+### Responsiveness:
 
-# Testing:
-
-- **Cross Browser Compatibility Testing**
+- Cross Browser Compatibility Testing:
   I ensured compatibility with Chrome, Microsoft Edge, and Firefox desktop browsers and verified responsiveness using Chrome Developer Tools across various devices including:
 
   - Desktop
@@ -376,22 +354,32 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
   - iPad, iPad Pro
   - Galaxy Fold
 
-<div align="center">
+| Device| Screenshort|
+|:-------:|:-------:|
+|Desktop|![Desktop](/readme-img/testing/responsive-desktop.png)|
+|Tablet |![Tablet](/readme-img/testing/responsive-tablet.png)|
+|Mobile |![Mobile](/readme-img/testing/responsive-mobile.png)|
 
-**Firefox**
-<img src="./accounts/static/registration/images/cbt-firefox.png" width="100%" align="top" alt="Cross Website Testing - Firefox">
+### Browser Compatibility:
+| Browser | Screenshot | Notes|
+|:-------:|:-------:|:-------:|
+| Chrome  | ![Chrome](/readme-img/testing/browser-chrome.png) |
+| Mozilla Firefox|![Firefox](/readme-img/testing/browser-firefox.png)  |
+| Microsoft Edge|![Edge](/readme-img/testing/browser-edge.png) |
 
-</div>
-<br>
-<div align="center">
+### Bugs: 
 
-**Google Chrome**
-<img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Chrome">
+| Description | Action | Status |
+|:-----|:------|:------:|
+|User Not Redirected to Dashboard After Sign Up| Modified the views.py to log the user in automatically and redirect them to the dashboard after a successful sign-up. Added a success message using Django's messages framework.| Closed|
+|Background Image Not Displaying Properly| Corrected the CSS for the background image by updating the background property in style.css to ensure the image path is correct and the image displays properly.| Closed|
+|Forms Not Displaying Validation Errors|Ensured that form errors are displayed by updating the form templates to iterate over form.errors and display error messages.|Closed|
+|Categories Not Updating Correctly|Reviewed and fixed the view and template logic for managing categories to ensure that category updates are processed and displayed correctly.| Closed|
+|Expense Form Not Submitting| Debugged the form submission process, ensuring that the form is properly validated and submitted. Fixed issues with CSRF token and form rendering.| Closed|
+|Dashboard Page Not Loading|Identified and fixed issues in the dashboard view, ensuring that data is correctly fetched and rendered.| Closed|
+|CSRF Token Errors| Ensured that all forms include {% csrf_token %} and that the CSRF middleware is properly configured.| Closed|
+|Static Files Error: Directory '/workspace/Expenso/static' in the STATICFILES_DIRS setting does not exist.|Created the missing static directory and ensured the correct path is set in STATICFILES_DIRS.|Closed|
 
-**Microsoft Edge**
-<img src="./accounts/static/registration/images/cbt-chrome.png" width="100%" align="top" alt="Cross Website Testing - Microsoft Edge">
-
-</div>
 
 ## Lighthouse Audit:
 
@@ -416,15 +404,19 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Link | Expected Outcome | Grade |
 | ------- | ---------------- | ----- |
 | Logo | Navigates to the home page when clicked | Fail |
-| Manage Budget | Navigates to a form to set, edit on delete a budget when clicked | Pass |
-| Manage Category | Navigates to a form to add, edit or delete an expense when clicked | Pass |
-| Add Expense | Navigates to a form to add an expense when clicked | Pass |
 | Sign Up | Navigates to a registration form when clicked | Pass |
 | Log in | Navigates to a screen where users can log in when clicked | Pass |
-| Logout | Navigates to a page confirming for the user to log out | Pass |
-| Create category | Click 'Add new' button	Prompt to enter new category name. Create new category. Redirect to list of categories | Pass |
-| Edit category | Click Edit icon	Prompt to update category name. Update. Redirect to list of categories	 | Pass |
+| Logout | Logs the user out | Pass |
+| Add Expense | Navigates to a form to add an expense when clicked | Pass |
+| Manage Category | Navigates to a form to add a category and view existing category(ies), when clicked | Pass |
+| Add category | Click 'Add Category' button	to add a new category name | Pass |
+| Edit category | Click Edit icon to update category name. Updates  Redirect to list of categories	 | Pass |
 | Delete category | Click Delete icon	Prompt to confirm delete action. Delete. Redirect to list of categories  | Pass |
+| Manage Budget | Navigates to a form to set, edit on delete a budget when clicked | Pass |
+
+
+
+
 
 <br>
 
