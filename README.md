@@ -422,20 +422,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | User Login/Logout | Users can log in using a form after clicking "Log in" and log out after clicking "Log out". | Pass | ![sign in testing ](./expenso_app/static/readme_img/testing/browswe-chrome.png)
 | Dashboad Overview | User can see an overview of expenses and budget(s) on the dashboard  | Pass | ![Dashboard View](./expenso_app/static/readme_img/features/dashboard.png)
 | Add Expense | A user can add a new expense with details such as amount, date, category, and notes.It will then be added and displayed on the dashboard. | Pass | ![Add Expense View](./expenso_app/static/readme_img/testing/add_expense4.png)![Add Expense View](./expenso_app/static/readme_img/testing/add_expense3.png)
-| Edit Expense | A user edit an existing expense to correct any mistakes or update the details as needed. | Pass | ![Edit Expense](./expenso_app/static/readme_img/testing/)
-| Delete Expense | A user can delete an expense to remove any incorrect or unnecessary records. It will then be deleted from the DB and updated on the dashboard. | Pass | ![Dashboard](./expenso_app/static/readme_img/features/dashboard.png)
-| Manage Categories | A user can add, edit and delete expense categories to  organize my expenses into relevant categories for better tracking. | Pass | ![Manage Categories](./expenso_app/static/readme_img/features/add_expense.png)
-| Manage Budgets | A user can add, edit and delete expense categories to  organize my expenses into relevant categories for better tracking. | Pass | ![Manage Categories](./expenso_app/static/readme_img/features/add_expense.png)
-| Budget Deduction | A user who added a book OR an admin can delete a book. It will then be deleted from the DB | Pass | ![Dashboard View](./expenso_app/static/readme_img/features/dashboard.png)
+| Edit Expense | A user edit an existing expense to correct any mistakes or update the details as needed. | Pass | ![Edit Expense](./expenso_app/static/readme_img/testing/edit_expense.png)![Edit Expense Confirmation](./expenso_app/static/readme_img/testing/edit_expense_confirmation.png)
+| Delete Expense | A user can delete an expense to remove any incorrect or unnecessary records. It will then be deleted from the DB and updated on the dashboard. | Pass | ![Delete Expense](./expenso_app/static/readme_img/testing/delete_expense.png)![Edit Expense Confirmation](./expenso_app/static/readme_img/testing/delete_expense_confirmation.png)
+| Manage Categories | A user can add, edit and delete expense categories to  organize my expenses into relevant categories for better tracking. | Pass | ![Manage Categories](./expenso_app/static/readme_img/testing/manage_categories3.png)![Manage Categories](./expenso_app/static/readme_img/testing/manage_categories_confirmation.png)
+| Manage Budgets | A user can add, edit and delete expense categories to  organize my expenses into relevant categories for better tracking. | Pass | ![Manage Categories](./expenso_app/static/readme_img/features/manage_budgets.png)![Manage Categories](./expenso_app/static/readme_img/testing/manage_budget_confirmation.png)
+| Budget Deduction | A user can see the remaining budget for each category after expenses are deducted to be able to monitor spending and adjust habits accordingly | Pass | ![Budget Deduction View](./expenso_app/static/readme_img/testing/budget_deduction.png)
 | Responsive Design| A user who added a book OR an admin can delete a book. It will then be deleted from the DB | Pass | ![Responsive](./expenso_app/static/images/mockup.png)
-
-
-
-
-
-| Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/67cfb78d-7d5b-4072-8aa8-812b9c444b67)
-
-
 
 <br>
 
